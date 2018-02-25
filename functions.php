@@ -28,6 +28,20 @@ function ___navigation_bar($nav_array){
 	<?php
 }
 
+function getCart(){
+	?>
+	<div class="cart box_1">
+		<a href="?content=checkout">
+			<div class="total">
+			<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
+			<img src="images/bag.png" alt="" />
+		</a>
+		<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+		<div class="clearfix"> </div>
+	</div>	
+	<?php
+}
+
 function ___inc_products(){
     include('inc/products.php');
 }

@@ -71,7 +71,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<p>&copy; 2018 CartOn. All rights reserved | Powered By Cross Developers League: Innovate, Nurture, Excel (XDLine)</p>
+				<p>&copy; 2017 CartOn. All rights reserved | Powered By Cross Developers League: Innovate, Nurture, Excel (XDLine)</p>
 			</div>
 		</div>
 	</div>

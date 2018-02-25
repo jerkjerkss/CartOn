@@ -1,4 +1,13 @@
 <?php include_once('functions.php'); 
+	session_start();
+	if (isset($_SESSION['userInfo'])) {
+      $accessibility = $_SESSION['userInfo']['account_type'];
+      switch ($_SESSION['userInfo']['UserAccess']) {
+              case 'customer':
+                header('Location: /carton/customer');
+                break;
+            }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +21,6 @@
     $pager = $_REQUEST['content'];
   endif;
  ?>
-
 </head>
 	
 <body>
@@ -25,7 +33,7 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
 						&times;</button>
 					<h4 class="modal-title" id="myModalLabel">
-						Don't Wait, Login now!</h4>
+						Login Now!</h4>
 				</div>
 				<div class="modal-body modal-body-sub">
 					<div class="row">
@@ -39,13 +47,12 @@
 									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 										<div class="facts">
 											<div class="register">
-												<form action="#" method="post">			
-													<input name="Email" placeholder="Email Address" type="text" required="">						
-													<input name="Password" placeholder="Password" type="password" required="">										
-													<div class="sign-up">
-														<input type="submit" value="Sign in"/>
-													</div>
-												</form>
+												<input name="Email" placeholder="Email Address" type="text" required="" id="signin-email">						
+												<input name="Password" placeholder="Password" type="password" required="" id="signin-pwd">										
+												<div class="sign-in">
+													<input type="submit" value="Sign in" id="btn-signin" />
+												</div>
+												<img src="images/loading.gif" id="signin-loading" style="display: none">
 											</div>
 										</div> 
 									</div>	
@@ -53,15 +60,24 @@
 									<div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
 										<div class="facts">
 											<div class="register">
-												<form action="#" method="post">			
-													<input placeholder="Name" name="Name" type="text" required="">
-													<input placeholder="Email Address" name="Email" type="email" required="">	
-													<input placeholder="Password" name="Password" type="password" required="">	
-													<input placeholder="Confirm Password" name="Password" type="password" required="">
-													<div class="sign-up">
-														<input type="submit" value="Create Account"/>
-													</div>
-												</form>
+												<div class="alert alert-danger fade in" style="display: none" id="signup-primary-alert">
+													<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+												  	<strong>FAILED!</strong><p id="alertMsg">Alert Message</p>
+												</div>
+												<input placeholder="First Name" name="First Name" type="text" required="" id="signup-fname">
+												<input placeholder="Last Name" name="Last Name" type="text" required="" id="signup-lname">	
+												<input placeholder="Email Address" name="Email" type="email" required="" id="signup-email">	
+												<label class="alert alert-warning" id="validateNote-email" style="display: none">The Email Address Format is Invalid</label>	
+												<input placeholder="Password" name="Password" type="password" required="" id="signup-pwd" maxlength="32">
+												<label class="alert alert-warning" id="validateNote-password" style="display: none">The Password Must Be Alphanumeric and atleast 8 characters</label>	
+												<input placeholder="Confirm Password" name="Password" type="password" required="" id="signup-cpwd" maxlength="32">
+												<label class="alert alert-warning" id="validateNote-cpassword" style="display: none">Password not matched</label>
+												<div class="sign-up">
+													<input type="submit" value="Create Account" id="btn-signup" />
+												</div>
+												<img src="images/loading.gif" id="signup-loading" style="display: none">
+												<br>
+												
 											</div>
 										</div>
 									</div> 			        					            	      
@@ -109,7 +125,7 @@
 				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 			</div>
 			<div class="w3l_logo">
-				<h1><a href="index.html">CartOn Shopping<span>Pasok mga suki</span></a></h1>
+				<h1><a href="index.html">CartOn Shopping <span> Pasok mga suki </span></a></h1>
 			</div>
 			<div class="search">
 				<input class="search_box" type="checkbox" id="search_box">
@@ -121,15 +137,9 @@
 					</form>
 				</div>
 			</div>
-			<!-- <div class="cart box_1">
-				<a href="checkout.html">
-					<div class="total">
-					<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-					<img src="images/bag.png" alt="" />
-				</a>
-				<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-				<div class="clearfix"> </div>
-			</div> -->	
+			
+
+
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -147,11 +157,10 @@
 				</div> 
 				<?php 
 			       ___navigation_bar(array(
-			          'Home' => "index.php",
+			          'Home' => "index",
 			          'Products' => "?content=products",
 			          'About' => "?content=about",
-			          'Mail Us' => "?content=mailus",
-			          'Check out' => "?content=checkout"
+			          'Mail Us' => "?content=mailus"
 			        ));
 		        ?>
 			</nav>
@@ -173,6 +182,8 @@
 
 	getFooterContents();
  ?>
+
+<script type="text/javascript" src="js/login.js"></script>
 
 </body>
 </html>

@@ -47,6 +47,10 @@
 									<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 										<div class="facts">
 											<div class="register">
+												<div class="alert alert-danger fade in" style="display: none" id="signin-primary-alert">
+													<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+												  	<strong>LOGIN FAILED!</strong><p id="alertMsg">Incorrect Data</p>
+												</div>
 												<input name="Email" placeholder="Email Address" type="text" required="" id="signin-email">						
 												<input name="Password" placeholder="Password" type="password" required="" id="signin-pwd">										
 												<div class="sign-in">

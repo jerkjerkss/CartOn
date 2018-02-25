@@ -22,13 +22,14 @@ function signup(){
             }else{
             	$("#signup-loading").hide();
 			    $(".sign-up").show();
+			    signin(data['email'], data['pwd']);
+			    alert('Successfully Created an Account');
             }
-		    alert(callback);
         });
     }, 1000);
 }
 
-function signin(){
+function signin(email = $("#signin-email").val(), password = $("#signin-pwd").val()){
 
 	$("#signin-loading").show();
     $(".sign-in").hide();
@@ -37,8 +38,8 @@ function signin(){
     setTimeout(function(){
     	var data = new Object();
     	data["request_type"] = "request-signin";
-    	data["email"] = $("#signin-email").val();
-    	data["pwd"] = $("#signin-pwd").val();
+    	data["email"] = email;
+    	data["pwd"] = password;
 
         $.post("lib/ajax-request.php", {data: data}, function(callback){
             if(callback == "LOGIN SUCCESS: customer"){
@@ -127,3 +128,10 @@ $("#signup-cpwd").on('input', function(){
 		$('#validateNote-cpassword').show();
 	}
 });
+
+$(".input-sign-in").keypress(function(e) {
+    if(e.which == 13) {
+        signin();
+    }
+});
+

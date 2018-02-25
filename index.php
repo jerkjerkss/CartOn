@@ -51,8 +51,8 @@
 													<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 												  	<strong>LOGIN FAILED!</strong><p id="alertMsg">Incorrect Data</p>
 												</div>
-												<input name="Email" placeholder="Email Address" type="text" required="" id="signin-email">						
-												<input name="Password" placeholder="Password" type="password" required="" id="signin-pwd">										
+												<input name="Email" placeholder="Email Address" type="text" required="" id="signin-email" class="input-sign-in">						
+												<input name="Password" placeholder="Password" type="password" required="" id="signin-pwd" class="input-sign-in">										
 												<div class="sign-in">
 													<input type="submit" value="Sign in" id="btn-signin" />
 												</div>
@@ -68,13 +68,13 @@
 													<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 												  	<strong>FAILED!</strong><p id="alertMsg">Alert Message</p>
 												</div>
-												<input placeholder="First Name" name="First Name" type="text" required="" id="signup-fname">
-												<input placeholder="Last Name" name="Last Name" type="text" required="" id="signup-lname">	
-												<input placeholder="Email Address" name="Email" type="email" required="" id="signup-email">	
+												<input placeholder="First Name" name="First Name" type="text" required="" id="signup-fname" class="input-sign-up">
+												<input placeholder="Last Name" name="Last Name" type="text" required="" id="signup-lname" class="input-sign-up">	
+												<input placeholder="Email Address" name="Email" type="email" required="" id="signup-email" class="input-sign-up">	
 												<label class="alert alert-warning" id="validateNote-email" style="display: none">The Email Address Format is Invalid</label>	
-												<input placeholder="Password" name="Password" type="password" required="" id="signup-pwd" maxlength="32">
+												<input placeholder="Password" name="Password" type="password" required="" id="signup-pwd" maxlength="32" class="input-sign-up">
 												<label class="alert alert-warning" id="validateNote-password" style="display: none">The Password Must Be Alphanumeric and atleast 8 characters</label>	
-												<input placeholder="Confirm Password" name="Password" type="password" required="" id="signup-cpwd" maxlength="32">
+												<input placeholder="Confirm Password" name="Password" type="password" required="" id="signup-cpwd" maxlength="32" class="input-sign-up">
 												<label class="alert alert-warning" id="validateNote-cpassword" style="display: none">Password not matched</label>
 												<div class="sign-up">
 													<input type="submit" value="Create Account" id="btn-signup" />

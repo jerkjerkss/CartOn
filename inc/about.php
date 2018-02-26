@@ -10,7 +10,7 @@
 	<div class="breadcrumb_dress">
 		<div class="container">
 			<ul>
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
+				<li><a href="index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
 				<li>About Us</li>
 			</ul>
 		</div>
@@ -111,7 +111,7 @@
 			<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
 				voluptatibus maiores alias consequatur aut perferendis doloribus asperiores 
 				repellat.</p>
-			<a href="dresses.html">Shop Now</a>
+			<a href="?content=products">Shop Now</a>
 		</div>
 	</div>
 <!-- //team-bottom -->

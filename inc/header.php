@@ -20,8 +20,7 @@
 	<!-- for bootstrap working -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 	<!-- //for bootstrap working -->
-	<link href='//fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
-	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	
 	<!-- start-smooth-scrolling -->
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {

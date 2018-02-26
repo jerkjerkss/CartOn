@@ -62,7 +62,8 @@
 			          'Home' => "index",
 			          'Products' => "?content=products",
 			          'About' => "?content=about",
-			          'Mail Us' => "?content=mailus"
+			          'Mail Us' => "?content=mailus",
+			          'Settings' => "?content=account"
 			        ));
 		        ?>
 			</nav>
@@ -78,6 +79,8 @@
 		___inc_checkout();
 	}else if($pager == "mailus"){
 		___inc_mailus();
+	}else if($pager == "account"){
+		___inc_account();
 	}else {
 		___inc_home();
 	}

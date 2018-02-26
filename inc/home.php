@@ -19,7 +19,6 @@
 						<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 					<!--//pop-up-box -->
 					<div id="small-dialog" class="mfp-hide">
-						<iframe src="https://player.vimeo.com/video/23259282?title=0&byline=0&portrait=0"></iframe>
 					</div>
 					<script>
 						$(document).ready(function() {
@@ -68,7 +67,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">T-Shirt</a></h5>
+									<h5><a href="#">T-Shirt</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -92,7 +91,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">T-Shirt</a></h5>
+									<h5><a href="#">T-Shirt</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -116,7 +115,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">T-Shirt</a></h5>
+									<h5><a href="#">T-Shirt</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -145,7 +144,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Skirt</a></h5>
+									<h5><a href="#">Skirt</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -169,7 +168,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Skirt</a></h5>
+									<h5><a href="#">Skirt</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -193,7 +192,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Skirt</a></h5>
+									<h5><a href="#">Skirt</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -222,7 +221,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Watch</a></h5>
+									<h5><a href="#">Watch</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -246,7 +245,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Watch</a></h5>
+									<h5><a href="#">Watch</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -270,7 +269,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Watch</a></h5>
+									<h5><a href="#">Watch</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -299,7 +298,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Sandal</a></h5>
+									<h5><a href="#">Sandal</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -323,7 +322,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Sandal</a></h5>
+									<h5><a href="#">Sandal</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -347,7 +346,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Sandal</a></h5>
+									<h5><a href="#">Sandal</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -376,7 +375,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Jewellery</a></h5>
+									<h5><a href="#">Jewellery</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -400,7 +399,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Jewellery</a></h5>
+									<h5><a href="#">Jewellery</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -424,7 +423,7 @@
 											</ul>
 										</div>
 									</div>
-									<h5><a href="single.html">Jewellery</a></h5>
+									<h5><a href="#">Jewellery</a></h5>
 									<div class="simpleCart_shelfItem">
 										<p><span>$320</span> <i class="item_price">$250</i></p>
 										<p><a class="item_add" href="#">Add to cart</a></p>
@@ -943,7 +942,7 @@
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Skirts</a></h5>
+						<h5><a href="#">Skirts</a></h5>
 						<div class="simpleCart_shelfItem">
 							<p><span>$320</span> <i class="item_price">$250</i></p>
 							<p><a class="item_add" href="#">Add to cart</a></p>
@@ -969,7 +968,7 @@
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Jackets</a></h5>
+						<h5><a href="#">Jackets</a></h5>
 						<div class="simpleCart_shelfItem">
 							<p><span>$320</span> <i class="item_price">$250</i></p>
 							<p><a class="item_add" href="#">Add to cart</a></p>
@@ -995,7 +994,7 @@
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Dresses</a></h5>
+						<h5><a href="#">Dresses</a></h5>
 						<div class="simpleCart_shelfItem">
 							<p><span>$320</span> <i class="item_price">$250</i></p>
 							<p><a class="item_add" href="#">Add to cart</a></p>
@@ -1021,7 +1020,7 @@
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Jeans</a></h5>
+						<h5><a href="#">Jeans</a></h5>
 						<div class="simpleCart_shelfItem">
 							<p><span>$320</span> <i class="item_price">$250</i></p>
 							<p><a class="item_add" href="#">Add to cart</a></p>

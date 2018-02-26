@@ -10,7 +10,7 @@
 	<div class="breadcrumb_dress">
 		<div class="container">
 			<ul>
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
+				<li><a href="index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
 				<li>Dresses</li>
 			</ul>
 		</div>
@@ -37,11 +37,11 @@
 								<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 								  <div class="panel-body panel_text">
 									<ul>
-										<li><a href="dresses.html">Product 1</a></li>
-										<li><a href="dresses.html">Product 1</a></li>
-										<li><a href="dresses.html">Product 1</a></li>
-										<li><a href="dresses.html">Product 1</a></li>
-										<li><a href="dresses.html">Product 1</a></li>
+										<li><a href="#">Product 1</a></li>
+										<li><a href="#">Product 1</a></li>
+										<li><a href="#">Product 1</a></li>
+										<li><a href="#">Product 1</a></li>
+										<li><a href="#">Product 1</a></li>
 										
 									</ul>
 								  </div>
@@ -58,10 +58,10 @@
 								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 								   <div class="panel-body panel_text">
 									<ul>
-										<li><a href="dresses.html">Product 2</a></li>
-										<li><a href="dresses.html">Product 2</a></li>
-										<li><a href="dresses.html">Product 2</a></li>
-										<li><a href="dresses.html">Product 2</a></li>
+										<li><a href="#">Product 2</a></li>
+										<li><a href="#">Product 2</a></li>
+										<li><a href="#">Product 2</a></li>
+										<li><a href="#">Product 2</a></li>
 									</ul>
 								  </div>
 								</div>
@@ -133,7 +133,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$420</span> <i class="item_price">$340</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -162,7 +162,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$320</span> <i class="item_price">$250</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -188,7 +188,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$231</span> <i class="item_price">$200</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -217,7 +217,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$323</span> <i class="item_price">$270</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -243,7 +243,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$233</span> <i class="item_price">$190</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -269,7 +269,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$342</span> <i class="item_price">$270</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -301,7 +301,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$312</span> <i class="item_price">$212</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -327,7 +327,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$234</span> <i class="item_price">$180</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -353,7 +353,7 @@
 										</ul>
 									</div>
 								</div>
-								<h5><a href="single.html">Dresses</a></h5>
+								<h5><a href="#">Dresses</a></h5>
 								<div class="simpleCart_shelfItem">
 									<p><span>$323</span> <i class="item_price">$250</i></p>
 									<p><a class="item_add" href="#">Add to cart</a></p>
@@ -450,7 +450,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Sweater</a></h5>
+							<h5><a href="#">Sweater</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$312</span> <i class="item_price">$212</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>
@@ -476,7 +476,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Sweater</a></h5>
+							<h5><a href="#">Sweater</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$432</span> <i class="item_price">$323</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>
@@ -502,7 +502,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Sweater</a></h5>
+							<h5><a href="#">Sweater</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$323</span> <i class="item_price">$310</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>
@@ -528,7 +528,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Sweater</a></h5>
+							<h5><a href="#">Sweater</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$256</span> <i class="item_price">$200</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>

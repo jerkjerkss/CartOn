@@ -62,4 +62,26 @@ function ___inc_home(){
     include('inc/home.php');
 }
 
+function ___inc_account(){
+	inject_asset('stylesheet', 'css/account.css');
+	include('inc/account.php');
+}
+
+// asset injector
+function inject_asset($type, $url){
+	if ($type == 'stylesheet') {
+	?>
+	<script type="text/javascript">
+		$('head').append('<link rel="stylesheet" type="text/css" href="<?php echo $url; ?>">');
+	</script>
+	<?php
+	}
+	else if ($type=='script') {
+	?>
+	<script type="text/javascript">
+		$('head').append('<script type="text/javascript" src="<?php echo $url; ?>"><\/script>');
+	</script>
+	<?php
+	}
+}
 

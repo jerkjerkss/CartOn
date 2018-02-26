@@ -10,7 +10,7 @@
 	<div class="breadcrumb_dress">
 		<div class="container">
 			<ul>
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
+				<li><a href="index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
 				<li>Checkout</li>
 			</ul>
 		</div>
@@ -37,7 +37,7 @@
 					</thead>
 					<tr class="rem1">
 						<td class="invert">1</td>
-						<td class="invert-image"><a href="single.html"><img src="images/j3.jpg" alt=" " class="img-responsive" /></a></td>
+						<td class="invert-image"><a href="#"><img src="images/j3.jpg" alt=" " class="img-responsive" /></a></td>
 						<td class="invert">
 							 <div class="quantity"> 
 								<div class="quantity-select">                           
@@ -66,7 +66,7 @@
 					</tr>
 					<tr class="rem2">
 						<td class="invert">2</td>
-						<td class="invert-image"><a href="single.html"><img src="images/ss5.jpg" alt=" " class="img-responsive" /></a></td>
+						<td class="invert-image"><a href="#"><img src="images/ss5.jpg" alt=" " class="img-responsive" /></a></td>
 						<td class="invert">
 							 <div class="quantity"> 
 								<div class="quantity-select">                           
@@ -95,7 +95,7 @@
 					</tr>
 					<tr class="rem3">
 						<td class="invert">3</td>
-						<td class="invert-image"><a href="single.html"><img src="images/c7.jpg" alt=" " class="img-responsive" /></a></td>
+						<td class="invert-image"><a href="#"><img src="images/c7.jpg" alt=" " class="img-responsive" /></a></td>
 						<td class="invert">
 							 <div class="quantity"> 
 								<div class="quantity-select">                           
@@ -149,7 +149,7 @@
 					</ul>
 				</div>
 				<div class="checkout-right-basket">
-					<a href="products.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
+					<a href="products"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -177,7 +177,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Pink Flared Skirt</a></h5>
+							<h5><a href="#">Pink Flared Skirt</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$312</span> <i class="item_price">$212</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>
@@ -203,7 +203,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Red Pencil Skirt</a></h5>
+							<h5><a href="#">Red Pencil Skirt</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$432</span> <i class="item_price">$323</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>
@@ -229,7 +229,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Yellow Cotton Skirt</a></h5>
+							<h5><a href="#">Yellow Cotton Skirt</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$323</span> <i class="item_price">$310</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>
@@ -255,7 +255,7 @@
 									</div>
 								</div>
 							</div>
-							<h5><a href="single.html">Black Short</a></h5>
+							<h5><a href="#">Black Short</a></h5>
 							<div class="simpleCart_shelfItem">
 								<p class="flexisel_ecommerce_cart"><span>$256</span> <i class="item_price">$200</i></p>
 								<p><a class="item_add" href="#">Add to cart</a></p>

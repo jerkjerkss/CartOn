@@ -1,10 +1,9 @@
 <?php include_once('functions.php'); 
 	session_start();
 	if (isset($_SESSION['userInfo'])) {
-      $accessibility = $_SESSION['userInfo']['account_type'];
       switch ($_SESSION['userInfo']['UserAccess']) {
               case 'customer':
-                header('Location: /carton/customer');
+                header('Location: customer');
                 break;
             }
     }
@@ -124,31 +123,7 @@
 	</div>
 	
 
-	<div class="header">
-		<div class="container">
-			<div class="w3l_login">
-				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
-			</div>
-			<div class="w3l_logo">
-				<a href="index"><img style="max-width: 277px;margin: 2px 0 -23px 0;" src="/CartOn/images/texticon.png">
-				</a>
-			</div>
-			<div class="search">
-				<input class="search_box" type="checkbox" id="search_box">
-				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
-				<div class="search_form">
-					<form action="#" method="post">
-						<input type="text" name="Search" placeholder="Search...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			</div>
-			
-
-
-			<div class="clearfix"> </div>
-		</div>
-	</div>
+	<?php getHeaderObjects(); ?>
 	<div class="navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">

@@ -9,6 +9,50 @@ function getFooterContents(){
     include('inc/footer.php');
 }
 
+function getHeaderObjects(){
+	?>
+	<div class="header">
+		<div class="container">
+			<div class="w3l_login">
+				<?php 
+					if (basename($_SERVER["SCRIPT_FILENAME"]) == "customer.php") {
+						?> 
+							<a href="lib/logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"><br>Logout</span></a>
+						<?php
+					}else {
+						?>
+							<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+						<?php
+					}
+				 ?>
+			</div>
+			<div class="w3l_logo">
+				<a href="index"><img style="max-width: 277px;margin: 2px 0 -23px 0;" src="/CartOn/images/texticon.png">
+				</a>
+			</div>
+			<div class="search">
+				<input class="search_box" type="checkbox" id="search_box">
+				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
+				<div class="search_form">
+					<form action="#" method="post">
+						<input type="text" name="Search" placeholder="Search...">
+						<input type="submit" value="Send">
+					</form>
+				</div>
+			</div>
+			<?php 
+				if (basename($_SERVER["SCRIPT_FILENAME"]) == "customer.php") {
+					getCart();
+				}
+			 ?>
+
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<?php
+}
+
 
 function ___navigation_bar($nav_array){
 	?>

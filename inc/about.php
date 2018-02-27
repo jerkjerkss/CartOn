@@ -61,7 +61,7 @@
 			<div class="wthree_team_grids">
 				<div class="col-md-4 wthree_team_grid">
 					<img src="images/8.png" alt=" " class="img-responsive" />
-					<h4>Smith Allen <span>Fashion Designer</span></h4>
+					<h4>Jericho Gonzales <span>Front End Developer</span></h4>
 					<div class="agileits_social_button">
 						<ul>
 							<li><a href="#" class="facebook"> </a></li>
@@ -73,7 +73,7 @@
 				</div>
 				<div class="col-md-4 wthree_team_grid">
 					<img src="images/9.png" alt=" " class="img-responsive" />
-					<h4>Laura James <span>Fashion Designer</span></h4>
+					<h4>Erwin Hayag <span>Back End Developer</span></h4>
 					<div class="agileits_social_button">
 						<ul>
 							<li><a href="#" class="facebook"> </a></li>
@@ -85,7 +85,7 @@
 				</div>
 				<div class="col-md-4 wthree_team_grid">
 					<img src="images/10.png" alt=" " class="img-responsive" />
-					<h4>Crisp Doe <span>Fashion Designer</span></h4>
+					<h4>Cedrick Paulme <span>Graphics Designer</span></h4>
 					<div class="agileits_social_button">
 						<ul>
 							<li><a href="#" class="facebook"> </a></li>

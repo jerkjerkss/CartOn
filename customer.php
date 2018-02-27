@@ -1,4 +1,13 @@
 <?php include_once('functions.php'); 
+	session_start();
+	if (isset($_SESSION['userInfo'])) {
+      switch ($_SESSION['userInfo']['UserAccess']) {
+              case 'customer':
+                break;
+            }
+    }else {
+        header('Location: index');
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,35 +25,7 @@
 	
 <body>
 <!-- header -->
-	<div class="header">
-		<div class="container">
-			<div class="w3l_login">
-				<a href="lib/logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"><br>Logout</span></a>
-			</div>
-			<div class="w3l_logo">
-				<h1><a href="index.html">CartOn Shopping <span> Pasok mga suki </span></a></h1>
-			</div>
-			<div class="search">
-				<input class="search_box" type="checkbox" id="search_box">
-				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
-				<div class="search_form">
-					<form action="#" method="post">
-						<input type="text" name="Search" placeholder="Search...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			</div>
-			
-
-
-			<?php getCart(); ?>
-
-
-
-
-			<div class="clearfix"> </div>
-		</div>
-	</div>
+	<?php getHeaderObjects(); ?>
 	<div class="navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">

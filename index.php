@@ -13,6 +13,7 @@
 <html>
 <head>
 <title>CartOn</title>
+<link rel="shortcut icon" href="/CartOn/images/icon.png">
 <?php 
 
   getHeaderAssets();
@@ -129,7 +130,8 @@
 				<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 			</div>
 			<div class="w3l_logo">
-				<h1><a href="index">CartOn Shopping <span> Pasok mga suki </span></a></h1>
+				<a href="index"><img style="max-width: 277px;margin: 2px 0 -23px 0;" src="/CartOn/images/texticon.png">
+				</a>
 			</div>
 			<div class="search">
 				<input class="search_box" type="checkbox" id="search_box">

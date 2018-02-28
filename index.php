@@ -12,7 +12,6 @@
 <html>
 <head>
 <title>CartOn</title>
-<link rel="shortcut icon" href="/CartOn/images/icon.png">
 <?php 
 
   getHeaderAssets();

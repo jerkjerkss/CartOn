@@ -136,7 +136,7 @@ label.icon-search {
     visibility: hidden;
 }
 .search_box:checked~.search_form{
-    width: 500px;
+    width: 510px;
     height: 62px;
     padding: 10px;
     top: 44px;

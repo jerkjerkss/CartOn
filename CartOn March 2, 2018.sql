@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2018 at 08:31 AM
+-- Generation Time: Mar 02, 2018 at 04:08 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.27
 
@@ -202,8 +202,8 @@ INSERT INTO `productoptions` (`ProductOptionID`, `ProductID`, `OptionID`, `Optio
 --
 -- Table structure for table `products`
 --
--- Creation: Feb 21, 2018 at 10:02 AM
--- Last update: Feb 21, 2018 at 10:02 AM
+-- Creation: Mar 02, 2018 at 12:32 PM
+-- Last update: Mar 02, 2018 at 02:38 PM
 --
 
 DROP TABLE IF EXISTS `products`;
@@ -224,16 +224,18 @@ CREATE TABLE IF NOT EXISTS `products` (
   `ProductLive` tinyint(1) DEFAULT '0',
   `ProductUnlimited` tinyint(1) DEFAULT '1',
   `ProductLocation` varchar(250) DEFAULT NULL,
+  `ProductVerified` tinyint(1) NOT NULL,
   PRIMARY KEY (`ProductID`)
-) ENGINE=MyISAM AUTO_INCREMENT=991 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`ProductID`, `ProductName`, `SellerGroupID`, `ProductPrice`, `ProductWeight`, `ProductCartDesc`, `ProductShortDesc`, `ProductLongDesc`, `ProductThumb`, `ProductImage`, `ProductCategoryID`, `ProductUpdateDate`, `ProductStock`, `ProductLive`, `ProductUnlimited`, `ProductLocation`) VALUES
-(1, 'Cotton T-Shirt', 0, 499.5, 3, 'Light Cotton T-Shirt', 'A light cotton T-Shirt made with 100% real cotton.', 'A light cotton T-Shirt made with 100% real cotton.\r\n\r\nMade right here in the USA for over 15 years, this t-shirt is lightweight and durable.', '', '', 5, '2013-06-12 17:00:50', 100, 1, 0, NULL),
-(2, 'Los Angeles', 0, 8999.5, 8, 'Track and Trail', 'A rugged track and trail athletic shoe', 'A rugged track and trail athletic shoe', '', '', 4, '2013-07-25 11:04:36', NULL, 0, 1, NULL);
+INSERT INTO `products` (`ProductID`, `ProductName`, `SellerGroupID`, `ProductPrice`, `ProductWeight`, `ProductCartDesc`, `ProductShortDesc`, `ProductLongDesc`, `ProductThumb`, `ProductImage`, `ProductCategoryID`, `ProductUpdateDate`, `ProductStock`, `ProductLive`, `ProductUnlimited`, `ProductLocation`, `ProductVerified`) VALUES
+(1, 'Cotton T-Shirt Cotton T-Shirt Cotton T-Shirt Cotton T-Shirt Cotton T-Shirt', 0, 499.5, 3, 'Light Cotton T-Shirt', 'A light cotton T-Shirt made with 100% real cotton.', 'A light cotton T-Shirt made with 100% real cotton.\r\n\r\nMade right here in the USA for over 15 years, this t-shirt is lightweight and durable.', 'TEST1.PNG', 'TEST1.PNG', 5, '2013-06-12 17:00:50', 99, 1, 0, NULL, 0),
+(2, 'Los Angeles', 0, 8999.5, 8, 'Track and Trail', 'A rugged track and trail athletic shoe', 'A rugged track and trail athletic shoe', 'TEST2.PNG', 'TEST2.PNG', 4, '2013-07-25 11:04:36', NULL, 0, 1, NULL, 0),
+(3, 'Asus Zenfone Live ZB501KL 16gb (Gold)  ', 1, 5000, 5, 'Asus Zenfone Live ZB501KL 16gb (Gold)  ', 'Specifications of Asus Zenfone Live ZB501KL 16gb (Gold)\r\nWhat\'s in the box:	\r\n1 x Asus Zenfone Live ZB501KL 16gb (Gold)1 x Headphones1 x USB Cable1 x USB AC Adapterincludes;earphone, charger, manual and cable\r\nGeneral Features:\r\nSKU	AS595ELAA9H9Y2ANPH-18932290\r\nScreen Size (inches)	5.0\r\nModel	ZB501KL\r\nStorage Capacity	16GB\r\nWarranty period	1 Year\r\nWarranty type	Local Manufacturer Warranty', 'Operating System: Android 6.0 with ZenUI 3.5\r\n \r\nDisplay: 5-inch HD(1280 x 720) IPS display\r\n \r\nProcessor: Qualcomm® Quad-Core Processor Snapdragon™\r\n \r\nGraphics: Adreno 305\r\n \r\nMemory: 2GB\r\n \r\nStorage: 16GB Internal Storage with microSD Card up to 128GB (Hybrid Slot)\r\n \r\nBattery: 2650mAh (non-removeable)\r\n \r\nConnectivity: Wi-Fi 802.11 b/g/n, WiFi-Direct, Miracast, hotspot, Bluetooth V 4.0\r\n \r\nOther Features: Accelerator/E-Compass/Proximity sensor/Ambient light sensor\r\nincludes:earphones,charger', 'TEST3.PNG', 'TEST3.PNG|||Capture.PNG|||Capture1.PNG|||Capture2.PNG|||Capture3.PNG|||Capture4.PNG|||Capture5.PNG', 3, '2018-03-02 12:31:28', 5, 1, 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -267,15 +269,23 @@ CREATE TABLE IF NOT EXISTS `sellergroups` (
   `DTIVerified` tinyint(1) NOT NULL,
   `BusinessPermitVerified` tinyint(1) NOT NULL,
   PRIMARY KEY (`SellerGroupID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sellergroups`
+--
+
+INSERT INTO `sellergroups` (`SellerGroupID`, `SellerGroupName`, `BIRVerified`, `DTIVerified`, `BusinessPermitVerified`) VALUES
+(1, 'XDLine', 1, 1, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `users`
 --
--- Creation: Feb 25, 2018 at 07:30 AM
--- Last update: Feb 25, 2018 at 07:30 AM
+-- Creation: Feb 28, 2018 at 03:07 AM
+-- Last update: Feb 28, 2018 at 07:13 AM
+-- Last check: Mar 01, 2018 at 12:40 PM
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -283,6 +293,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `UserID` int(11) NOT NULL AUTO_INCREMENT,
   `UserEmail` varchar(500) DEFAULT NULL,
   `UserPassword` varchar(500) DEFAULT NULL,
+  `UserToken` varchar(500) NOT NULL,
   `UserAccess` varchar(20) NOT NULL,
   `UserFirstName` varchar(50) DEFAULT NULL,
   `UserLastName` varchar(50) DEFAULT NULL,
@@ -299,7 +310,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `UserAddress` varchar(100) DEFAULT NULL,
   `UserAddress2` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UserID`, `UserEmail`, `UserPassword`, `UserToken`, `UserAccess`, `UserFirstName`, `UserLastName`, `UserCity`, `UserState`, `UserZip`, `UserEmailVerified`, `UserRegistrationDate`, `UserVerificationCode`, `UserIP`, `UserPhone`, `UserFax`, `UserCountry`, `UserAddress`, `UserAddress2`) VALUES
+(1, 'erwinhayag85@gmail.com', '5DMynbIy_pwDbz-rs5KIX9zarUllqc53PXFvAbJU0K8', 'H4Pyjq7dfMb0aH8UkIU0CgAENGFPbK4rjDwCa_4UfQE', 'customer', 'Erwin', 'Hayag', NULL, NULL, NULL, 0, '2018-02-25 09:14:26', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'ardiehayag17@gmail.com', 'EkPgrTh071UHka-GtxDeuTfVWqeDpyp165f7IitAmK0', 'EkPgrTh071UHka-GtxDeuTfVWqeDpyp165f7IitAmK0', 'customer', 'Ardie', 'Hayag', NULL, NULL, NULL, 0, '2018-02-25 09:22:58', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

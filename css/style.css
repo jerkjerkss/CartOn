@@ -1604,9 +1604,12 @@ ul.panel_bottom {
 }
 .w3ls_dresses_grid_left_grid_sub {
     border: 1px solid #E1E1E1;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     padding:2em 1.5em 1em;
+    /*For Category Text Cut*/
+    overflow: hidden;
+    white-space: nowrap;
 }
 .w3ls_dresses_grid_left_grid:nth-child(2){
     margin:2em 0;
@@ -1721,6 +1724,8 @@ select.select_item {
 }
 .dresses_grid{
     position:relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .dresses_grid_pos{
     position: absolute;

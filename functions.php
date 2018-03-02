@@ -1,5 +1,11 @@
 <?php
+include('lib/CARTON.php');
+include('lib/fetchinfo.php');
 
+$CARTON = "CARTON";
+$FETCHINFO = "FetchInfo";
+$CART = new $CARTON;
+$FINFO = new $FETCHINFO;
 
 function getHeaderAssets(){
     include('inc/header.php');
@@ -128,4 +134,148 @@ function inject_asset($type, $url){
 	<?php
 	}
 }
+
+
+function product_category(){
+	global $FETCHINFO;
+	$categoryArray = $FETCHINFO::getCategoryArray();
+
+	foreach ($categoryArray as $key => $value) {
+	?>
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="heading-<?php echo $key; ?>">
+		  <h4 class="panel-title asd">
+			<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $key; ?>" aria-expanded="false" aria-controls="collapseT-<?php echo $key; ?>">
+			  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i><?php echo $value["CategoryName"]; ?>
+			</a>
+		  </h4>
+		</div>
+		<div id="collapse-<?php echo $key; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $key; ?>">
+		   <div class="panel-body panel_text">
+			<ul>
+				<li><a href="#">Product 2</a></li>
+				<li><a href="#">Product 2</a></li>
+				<li><a href="#">Product 2</a></li>
+				<li><a href="#">Product 2</a></li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	<?php
+	}
+}
+
+function show_products(){
+	global $FETCHINFO;
+	$productArray = $FETCHINFO::getProductArray();
+	foreach ($productArray as $key => $products) {
+		$ImageArray = explode("|||", $products['ProductImage']);
+		$datetime1 = date_create($products['ProductUpdateDate']);
+		$datetime2 = date_create(date("Y-m-d H:i:s"));
+		$dateRange = date_diff($datetime1, $datetime2)->format('%a');
+
+
+	?>
+	<div class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
+		<div class="agile_ecommerce_tab_left dresses_grid">
+			<div class="hs-wrapper hs-wrapper2">
+				<?php 
+					for ($i=0; $i < 7; $i++) { 
+							for ($j=0; $j < count($ImageArray); $j++) { 
+								?>
+									<img src="uploads/products/<?php echo $ImageArray[$j] ?>" alt="<?php echo $ImageArray[$j] ?>" class="img-responsive" />
+								<?php
+							}
+						
+					}
+				 ?>
+				<div class="w3_hs_bottom w3_hs_bottom_sub1">
+					<ul>
+						<li>
+							<a href="#" data-toggle="modal" data-target="#productModal-<?php echo $products['ProductID']?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h5><a href="#" title="<?php echo $products['ProductName'] ?>"><?php echo $products['ProductName'] ?></a></h5>
+			<div class="simpleCart_shelfItem">
+				<p><span>$420</span> <i class="item_price">Php <?php echo $products['ProductPrice']; ?></i></p>
+				<p><a class="item_add" href="#">Add to cart</a></p>
+			</div>
+			
+				<?php 
+					if ($dateRange <= 10) {
+						echo '<div class="dresses_grid_pos"><h6>New</h6></div>';
+					}
+				 ?>
+			
+		</div>
+	</div>
+
+
+
+	<!-- MODAL -->
+
+	<div class="modal video-modal fade" id="productModal-<?php echo $products['ProductID']?>" tabindex="-1" role="dialog" aria-labelledby="productModal-<?php echo $products['ProductID']?>">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<!-- <img src="images/39.jpg" alt=" " class="img-responsive" /> -->
+					
+							<img src="uploads/products/<?php echo $products['ProductThumb'] ?>" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4><?php echo $products['ProductName']; ?></h4>
+							<p><?php echo $products['ProductLongDesc'] ?></p>
+							<div class="rating">
+								<div class="rating-left">
+									<img src="images/star-.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="images/star-.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="images/star-.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="images/star.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="rating-left">
+									<img src="images/star.png" alt=" " class="img-responsive" />
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$320</span> <i class="item_price">Php <?php echo $products['ProductPrice']; ?></i></p>
+								<p><a class="item_add" href="#">Add to cart</a></p>
+							</div>
+							<h5>Color</h5>
+							<div class="color-quality">
+								<ul>
+									<li><a href="#"><span></span>Red</a></li>
+									<li><a href="#" class="brown"><span></span>Yellow</a></li>
+									<li><a href="#" class="purple"><span></span>Purple</a></li>
+									<li><a href="#" class="gray"><span></span>Violet</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<?php
+	}
+
+
+
+
+}
+
 

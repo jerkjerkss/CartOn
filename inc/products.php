@@ -11,7 +11,7 @@
 		<div class="container">
 			<ul>
 				<li><a href="index"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a> <i>/</i></li>
-				<li>Dresses</li>
+				<li>Products</li>
 			</ul>
 		</div>
 	</div>

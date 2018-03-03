@@ -23,7 +23,6 @@ function signup(){
             	$("#signup-loading").hide();
 			    $(".sign-up").show();
 			    signin(data['email'], data['pwd']);
-			    alert('Successfully Created an Account');
             }
         });
     }, 1000);

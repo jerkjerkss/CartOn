@@ -63,18 +63,18 @@ function getHeaderObjects(){
 function ___navigation_bar($nav_array){
 	?>
 		<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-					<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav">
 
-					<?php 
-						foreach ($nav_array as $nav => $link) {
-							?>
-								<li><a href="<?php echo $link; ?>"><?php echo $nav; ?></a></li>	
-							<?php
-						}
-					 ?>
+			<?php 
+				foreach ($nav_array as $nav => $link) {
+					?>
+						<li><a href="<?php echo $link; ?>"><?php echo $nav; ?></a></li>	
+					<?php
+				}
+			 ?>
 
-					</ul>
-				</div
+			</ul>
+		</div
 	<?php
 }
 

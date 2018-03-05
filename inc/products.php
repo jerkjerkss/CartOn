@@ -86,9 +86,6 @@
 
 							<!-- products here -->
 							<?php show_products(); ?>
-							<?php show_products(); ?>
-							<?php show_products(); ?>
-							<?php show_products(); ?>
 
 
 					</div>

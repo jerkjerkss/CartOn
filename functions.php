@@ -164,17 +164,18 @@ function product_category(){
 	<?php
 	}
 }
-
-function show_products(){
+function show_products($toShow = -1){
 	global $FETCHINFO;
 	$productArray = $FETCHINFO::getProductArray();
 	foreach ($productArray as $key => $products) {
+
+		if ($key == $toShow) {
+			break;
+		}
 		$ImageArray = explode("|||", $products['ProductImage']);
 		$datetime1 = date_create($products['ProductUpdateDate']);
 		$datetime2 = date_create(date("Y-m-d H:i:s"));
 		$dateRange = date_diff($datetime1, $datetime2)->format('%a');
-
-
 	?>
 	<div class="col-md-4 agileinfo_new_products_grid agileinfo_new_products_grid_dresses">
 		<div class="agile_ecommerce_tab_left dresses_grid">
@@ -272,10 +273,21 @@ function show_products(){
 	</div>
 	<?php
 	}
-
-
-
-
 }
 
+function mostRecentProducts(){
+	?>
+	<ul id="myTab" class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home">Best Sellers</a></li>
+		<li role="presentation"><a href="#skirts" role="tab" id="skirts-tab" data-toggle="tab" aria-controls="skirts">Sales</a></li>
+		<li role="presentation"><a href="#watches" role="tab" id="watches-tab" data-toggle="tab" aria-controls="watches">New Arrivals</a></li>
+		<li role="presentation"><a href="#sandals" role="tab" id="sandals-tab" data-toggle="tab" aria-controls="sandals">Top Search</a></li>
+		<!-- <li role="presentation"><a href="#jewellery" role="tab" id="jewellery-tab" data-toggle="tab" aria-controls="jewellery">Promo Products</a></li> -->
+	</ul>
 
+	
+	<?php 
+	 ?>
+	<?php
+
+}

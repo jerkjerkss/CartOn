@@ -316,7 +316,7 @@ ul.multi-column-dropdown h6 {
     min-height:700px;
 }
 .banner10{
-    background:url(../images/b1.jpg) no-repeat 0px 0px;
+    background:url(../images/bgd.jpg) no-repeat 0px 0px;
     background-size:cover;
     -webkit-background-size:cover;
     -moz-background-size:cover;
@@ -328,10 +328,10 @@ ul.multi-column-dropdown h6 {
     min-height:400px;
 }
 .banner10 h2{
-    color: #59f6ff;
-    font-size: 3em;
+    color: #ffffff;
+    font-size: 4.8em;
     text-align: center;
-    padding: 2.5em 0 0;
+    padding: 1.4em 0 0;
 }
 .banner1{
     background:url(../images/banner3.jpg) no-repeat 0px 0px;
@@ -633,7 +633,7 @@ ul.multi-column-dropdown h6 {
     background: #fff;
 }
 .w3_hs_bottom ul li a:hover,.flex_ecommerce a:hover{
-    background:#ff9b05;
+    background: #00b1a2 !important;
     color:#fff;
 }
 .agile_ecommerce_tab_left:hover .w3_hs_bottom{
@@ -655,8 +655,8 @@ ul.multi-column-dropdown h6 {
     width: 950px;
 }
 .modal_body_right h4{
-    font-size:1.6em;
-    color:#ff9b05;
+    font-size: 2.6em;
+    color: #068477;
     text-transform: capitalize;
 }
 .modal_body_right p{
@@ -2131,7 +2131,7 @@ h2.typoh2{
 }
 .wthree_team_grid h4{
     font-size:1em;
-    color: #00b2a3;
+    color: #179496;
     margin:1em 0;
 }
 .wthree_team_grid h4 span{
@@ -2517,7 +2517,8 @@ div#horizontalTab1 ul {
     margin:0 0 3em;
 }
 .checkout h3 span{
-    color:#ff9b05;
+    color: #d01b1b;
+    font-size: 1.4em;
 }
 table.timetable_sub {
     width:100%;
@@ -2568,7 +2569,7 @@ td.invert-image a img {
 }
 .checkout-left-basket h4{
     padding: 1em;
-    background:#ff9b05;
+    background: #0f7778;
     font-size: 1.1em;
     color: #fff;
     text-transform: uppercase;
@@ -2612,7 +2613,7 @@ td.invert-image a img {
     text-decoration:none;
 }
 .checkout-right-basket a:hover{
-    background:#ff9b05;
+    background: #0f7778;
 }
 .checkout-right-basket a span {
     left: -.5em;

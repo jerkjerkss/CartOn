@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2018 at 11:09 AM
+-- Generation Time: Mar 05, 2018 at 10:04 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.27
 
@@ -232,16 +232,16 @@ INSERT INTO `productoptions` (`ProductOptionID`, `ProductID`, `OptionID`, `Optio
 --
 -- Table structure for table `products`
 --
--- Creation: Mar 02, 2018 at 12:32 PM
--- Last update: Mar 02, 2018 at 02:38 PM
--- Last check: Mar 02, 2018 at 11:56 PM
+-- Creation: Mar 05, 2018 at 08:09 AM
+-- Last update: Mar 05, 2018 at 08:09 AM
 --
 
 DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
   `ProductID` int(12) NOT NULL AUTO_INCREMENT,
-  `ProductName` varchar(100) NOT NULL,
+  `CategoryID` int(11) DEFAULT NULL,
   `SellerGroupID` int(12) NOT NULL,
+  `ProductName` varchar(100) NOT NULL,
   `ProductPrice` float NOT NULL,
   `ProductWeight` float NOT NULL,
   `ProductCartDesc` varchar(250) NOT NULL,
@@ -249,7 +249,6 @@ CREATE TABLE IF NOT EXISTS `products` (
   `ProductLongDesc` text NOT NULL,
   `ProductThumb` varchar(100) NOT NULL,
   `ProductImage` varchar(100) NOT NULL,
-  `ProductCategoryID` int(11) DEFAULT NULL,
   `ProductUpdateDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ProductStock` float DEFAULT NULL,
   `ProductLive` tinyint(1) DEFAULT '0',
@@ -261,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 --
 -- RELATIONSHIPS FOR TABLE `products`:
---   `ProductCategoryID`
+--   `CategoryID`
 --       `productcategories` -> `CategoryID`
 --   `SellerGroupID`
 --       `sellergroups` -> `SellerGroupID`
@@ -271,10 +270,10 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`ProductID`, `ProductName`, `SellerGroupID`, `ProductPrice`, `ProductWeight`, `ProductCartDesc`, `ProductShortDesc`, `ProductLongDesc`, `ProductThumb`, `ProductImage`, `ProductCategoryID`, `ProductUpdateDate`, `ProductStock`, `ProductLive`, `ProductUnlimited`, `ProductLocation`, `ProductVerified`) VALUES
-(1, 'Cotton T-Shirt Cotton T-Shirt Cotton T-Shirt Cotton T-Shirt Cotton T-Shirt', 0, 499.5, 3, 'Light Cotton T-Shirt', 'A light cotton T-Shirt made with 100% real cotton.', 'A light cotton T-Shirt made with 100% real cotton.\r\n\r\nMade right here in the USA for over 15 years, this t-shirt is lightweight and durable.', 'TEST1.PNG', 'TEST1.PNG', 5, '2013-06-12 17:00:50', 99, 1, 0, NULL, 0),
-(2, 'Los Angeles', 0, 8999.5, 8, 'Track and Trail', 'A rugged track and trail athletic shoe', 'A rugged track and trail athletic shoe', 'TEST2.PNG', 'TEST2.PNG', 4, '2013-07-25 11:04:36', NULL, 0, 1, NULL, 0),
-(3, 'Asus Zenfone Live ZB501KL 16gb (Gold)  ', 1, 5000, 5, 'Asus Zenfone Live ZB501KL 16gb (Gold)  ', 'Specifications of Asus Zenfone Live ZB501KL 16gb (Gold)\r\nWhat\'s in the box:	\r\n1 x Asus Zenfone Live ZB501KL 16gb (Gold)1 x Headphones1 x USB Cable1 x USB AC Adapterincludes;earphone, charger, manual and cable\r\nGeneral Features:\r\nSKU	AS595ELAA9H9Y2ANPH-18932290\r\nScreen Size (inches)	5.0\r\nModel	ZB501KL\r\nStorage Capacity	16GB\r\nWarranty period	1 Year\r\nWarranty type	Local Manufacturer Warranty', 'Operating System: Android 6.0 with ZenUI 3.5\r\n \r\nDisplay: 5-inch HD(1280 x 720) IPS display\r\n \r\nProcessor: Qualcomm® Quad-Core Processor Snapdragon™\r\n \r\nGraphics: Adreno 305\r\n \r\nMemory: 2GB\r\n \r\nStorage: 16GB Internal Storage with microSD Card up to 128GB (Hybrid Slot)\r\n \r\nBattery: 2650mAh (non-removeable)\r\n \r\nConnectivity: Wi-Fi 802.11 b/g/n, WiFi-Direct, Miracast, hotspot, Bluetooth V 4.0\r\n \r\nOther Features: Accelerator/E-Compass/Proximity sensor/Ambient light sensor\r\nincludes:earphones,charger', 'TEST3.PNG', 'TEST3.PNG|||Capture.PNG|||Capture1.PNG|||Capture2.PNG|||Capture3.PNG|||Capture4.PNG|||TEST3.PNG', 3, '2018-03-02 12:31:28', 5, 1, 0, NULL, 0);
+INSERT INTO `products` (`ProductID`, `CategoryID`, `SellerGroupID`, `ProductName`, `ProductPrice`, `ProductWeight`, `ProductCartDesc`, `ProductShortDesc`, `ProductLongDesc`, `ProductThumb`, `ProductImage`, `ProductUpdateDate`, `ProductStock`, `ProductLive`, `ProductUnlimited`, `ProductLocation`, `ProductVerified`) VALUES
+(1, 1, 0, 'Cotton T-Shirt', 499.5, 3, 'Light Cotton T-Shirt', 'A light cotton T-Shirt made with 100% real cotton.', 'A light cotton T-Shirt made with 100% real cotton.\r\n\r\nMade right here in the USA for over 15 years, this t-shirt is lightweight and durable.', 'TEST1.PNG', 'TEST1.PNG', '2013-06-12 17:00:50', 99, 1, 0, NULL, 0),
+(2, 1, 0, 'Los Angeles', 8999.5, 8, 'Track and Trail', 'A rugged track and trail athletic shoe', 'A rugged track and trail athletic shoe', 'TEST2.PNG', 'TEST2.PNG', '2013-07-25 11:04:36', NULL, 0, 1, NULL, 0),
+(3, 3, 1, 'Asus Zenfone Live ZB501KL 16gb (Gold)  ', 5000, 5, 'Asus Zenfone Live ZB501KL 16gb (Gold)  ', 'Specifications of Asus Zenfone Live ZB501KL 16gb (Gold)\r\nWhat\'s in the box:	\r\n1 x Asus Zenfone Live ZB501KL 16gb (Gold)1 x Headphones1 x USB Cable1 x USB AC Adapterincludes;earphone, charger, manual and cable\r\nGeneral Features:\r\nSKU	AS595ELAA9H9Y2ANPH-18932290\r\nScreen Size (inches)	5.0\r\nModel	ZB501KL\r\nStorage Capacity	16GB\r\nWarranty period	1 Year\r\nWarranty type	Local Manufacturer Warranty', 'Operating System: Android 6.0 with ZenUI 3.5\r\n \r\nDisplay: 5-inch HD(1280 x 720) IPS display\r\n \r\nProcessor: Qualcomm® Quad-Core Processor Snapdragon™\r\n \r\nGraphics: Adreno 305\r\n \r\nMemory: 2GB\r\n \r\nStorage: 16GB Internal Storage with microSD Card up to 128GB (Hybrid Slot)\r\n \r\nBattery: 2650mAh (non-removeable)\r\n \r\nConnectivity: Wi-Fi 802.11 b/g/n, WiFi-Direct, Miracast, hotspot, Bluetooth V 4.0\r\n \r\nOther Features: Accelerator/E-Compass/Proximity sensor/Ambient light sensor\r\nincludes:earphones,charger', 'TEST3.PNG', 'TEST3.PNG|||Capture.PNG|||Capture1.PNG|||Capture2.PNG|||Capture3.PNG|||Capture4.PNG|||TEST3.PNG', '2018-03-02 12:31:28', 5, 1, 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -336,7 +335,7 @@ INSERT INTO `sellergroups` (`SellerGroupID`, `SellerGroupName`, `BIRVerified`, `
 --
 -- Creation: Feb 28, 2018 at 03:07 AM
 -- Last update: Mar 03, 2018 at 10:08 AM
--- Last check: Mar 01, 2018 at 12:40 PM
+-- Last check: Mar 04, 2018 at 12:48 AM
 --
 
 DROP TABLE IF EXISTS `users`;

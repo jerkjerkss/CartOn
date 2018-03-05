@@ -17,7 +17,7 @@ function getFooterContents(){
 
 function getHeaderObjects(){
 	?>
-	<div class="header">
+	<div class="header" id="header">
 		<div class="container">
 			<div class="w3l_login">
 				<?php 

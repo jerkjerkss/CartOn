@@ -276,18 +276,30 @@ function show_products($toShow = -1){
 }
 
 function mostRecentProducts(){
-	?>
-	<ul id="myTab" class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home">Best Sellers</a></li>
-		<li role="presentation"><a href="#skirts" role="tab" id="skirts-tab" data-toggle="tab" aria-controls="skirts">Sales</a></li>
-		<li role="presentation"><a href="#watches" role="tab" id="watches-tab" data-toggle="tab" aria-controls="watches">New Arrivals</a></li>
-		<li role="presentation"><a href="#sandals" role="tab" id="sandals-tab" data-toggle="tab" aria-controls="sandals">Top Search</a></li>
-		<!-- <li role="presentation"><a href="#jewellery" role="tab" id="jewellery-tab" data-toggle="tab" aria-controls="jewellery">Promo Products</a></li> -->
-	</ul>
+	$arraySubNav = array('best-sellers' => 'Best Sellers', 
+						 'sales' => 'Sales',
+						 'new-arivals' => 'New Arrivals',
+						 'top-search' => 'Top Search');
 
-	
-	<?php 
+	?><ul id="myTab" class="nav nav-tabs" role="tablist"><?php
+	foreach ($arraySubNav as $key => $value) {
+		?>
+			<li role="presentation" class="<?php echo ($key == 'best-sellers') ? 'active' : '' ?>"><a href="#<?php echo $key ?>" id="<?php  echo $key?>-tab" role="tab" data-toggle="tab" aria-controls="home"><?php echo $value; ?></a></li>
+		<?php
+	}
+	?></ul><div id="myTabContent" class="tab-content"><?php
+	foreach ($arraySubNav as $key => $value) {
+		?>
+			<div role="tabpanel" class="tab-pane fade <?php echo ($key == 'best-sellers') ? 'active' : '' ?> in" id="<?php echo $key ?>" aria-labelledby="<?php echo $key ?>-tab">
+				<div class="agile_ecommerce_tabs">
+					<?php show_products(3); ?>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		<?php 
+	}
 	 ?>
+	</div>
 	<?php
 
 }

@@ -113,8 +113,8 @@ function ___inc_home(){
 }
 
 function ___inc_account(){
-	inject_asset('stylesheet', 'css/account.css');
 	include('inc/account.php');
+	inject_asset('stylesheet', 'css/account.css');
 }
 
 // asset injector
@@ -136,34 +136,7 @@ function inject_asset($type, $url){
 }
 
 
-function product_category(){
-	global $FETCHINFO;
-	$categoryArray = $FETCHINFO::getCategoryArray();
 
-	foreach ($categoryArray as $key => $value) {
-	?>
-	<div class="panel panel-default">
-		<div class="panel-heading" role="tab" id="heading-<?php echo $key; ?>">
-		  <h4 class="panel-title asd">
-			<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $key; ?>" aria-expanded="false" aria-controls="collapseT-<?php echo $key; ?>">
-			  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i><?php echo $value["CategoryName"]; ?>
-			</a>
-		  </h4>
-		</div>
-		<div id="collapse-<?php echo $key; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $key; ?>">
-		   <div class="panel-body panel_text">
-			<ul>
-				<li><a href="#">Product 2</a></li>
-				<li><a href="#">Product 2</a></li>
-				<li><a href="#">Product 2</a></li>
-				<li><a href="#">Product 2</a></li>
-			</ul>
-		  </div>
-		</div>
-	  </div>
-	<?php
-	}
-}
 function show_products($toShow = -1){
 	global $FETCHINFO;
 	$productArray = $FETCHINFO::getProductArray();

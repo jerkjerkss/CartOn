@@ -23,14 +23,12 @@
 			<h3>Mail Us</h3>
 			<div class="agile_mail_grids">
 				<div class="col-md-5 contact-left">
-					<h4>Address</h4>
-					<p>est eligendi optio cumque nihil impedit quo minus id quod maxime
-						<span>26 56D Rescue,US</span></p>
+					<h4>Primary Contact Information</h4>
 					<ul>
-						<li>Free Phone :+1 078 4589 2456</li>
-						<li>Telephone :+1 078 4589 2456</li>
-						<li>Fax :+1 078 4589 2456</li>
-						<li><a href="mailto:info@example.com">info@example.com</a></li>
+						<li>Email : cart@on.com</li>
+						<li>Telephone :+63 920 520 9320</li>
+						<li>Mobile : +63 995 508 0999</li>
+						<li><a href="carton@web.com">carton@web.com</a></li>
 					</ul>
 				</div>
 				<div class="col-md-7 contact-left">

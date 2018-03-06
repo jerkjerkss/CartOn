@@ -1,0 +1,14 @@
+.btn
+{
+	 padding: 10px 50px;
+	 font-family: lato light;
+	 background-color: #00b2a3;
+	 color: #ffffff;
+	 
+}
+.btn:hover
+{
+	transition: 0.8s;
+	background-color: black; 
+	color: #ffffff;
+}

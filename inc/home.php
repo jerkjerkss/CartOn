@@ -40,35 +40,6 @@
 			<div class="col-md-8 wthree_banner_bottom_right">
 				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<?php mostRecentProducts(); ?>
-					<div id="myTabContent" class="tab-content">
-						<div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
-							<div class="agile_ecommerce_tabs">
-
-								<?php show_products(3); ?>
-								
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="skirts" aria-labelledby="skirts-tab">
-							<div class="agile_ecommerce_tabs">
-								<?php show_products(1); ?>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="watches" aria-labelledby="watches-tab">
-							<div class="agile_ecommerce_tabs">
-								<?php show_products(2); ?>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div role="tabpanel" class="tab-pane fade" id="sandals" aria-labelledby="sandals-tab">
-							<div class="agile_ecommerce_tabs">
-								<?php show_products(3); ?>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						
-					</div>
 				</div>
 					<!--modal-video-->
 				<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">

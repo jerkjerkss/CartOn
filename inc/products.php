@@ -1,3 +1,4 @@
+	<?php global $FETCHINFO; ?>
 <!-- banner -->
 	<div class="banner1" id="home1">
 		<div class="container">
@@ -31,8 +32,34 @@
 
 								<!-- CATEGORY HERE -->
 
-								<?php product_category(); ?>
+								<?php 
+									$categoryArray = $FETCHINFO::getCategoryArray();
+									foreach ($categoryArray as $key => $value) {
+									?>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="heading-<?php echo $key; ?>">
+										  <h4 class="panel-title asd">
+											<a class="pa_italic collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $key; ?>" aria-expanded="false" aria-controls="collapseT-<?php echo $key; ?>">
+											  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><i class="glyphicon glyphicon-minus" aria-hidden="true"></i><?php echo $value["CategoryName"]; ?>
+											</a>
+										  </h4>
+										</div>
+										<div id="collapse-<?php echo $key; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $key; ?>">
+										   <div class="panel-body panel_text">
+											<ul>
+												<li><a href="#">Product 1</a></li>
+												<li><a href="#">Product 2</a></li>
+												<li><a href="#">Product 3</a></li>
+												<li><a href="#">Product 4</a></li>
+											</ul>
+										  </div>
+										</div>
+									  </div>
+									<?php
+									}
+								 ?>
 
+								<!-- CATEGORY ENDS HERE -->
 
 							  
 							</div>
@@ -85,7 +112,7 @@
 					<div class="w3ls_dresses_grid_right_grid3">
 
 							<!-- products here -->
-							<?php show_products(); ?>
+							<?php show_products(15); ?>
 
 
 					</div>

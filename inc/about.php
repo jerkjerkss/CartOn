@@ -94,24 +94,11 @@
 				</div>
 				
 				<div class="clearfix"> </div>
-				<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
-					voluptatibus maiores alias consequatur aut perferendis doloribus asperiores 
-					repellat.</p>
 			</div>
 		</div>
 	</div>
 <!-- //team -->
-<!-- team-bottom -->
-	<div class="team-bottom">
-		<div class="container">
-			<h3>Are You Ready For Awesomeness? Flat <span>50% Offer</span> For Women's</h3>
-			<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
-				voluptatibus maiores alias consequatur aut perferendis doloribus asperiores 
-				repellat.</p>
-			<a href="?content=products">Shop Now</a>
-		</div>
-	</div>
-<!-- //team-bottom -->
+
 
 <script type="text/javascript">
 	document.title = "CartOn | About";

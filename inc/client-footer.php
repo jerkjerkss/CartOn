@@ -1,4 +1,4 @@
-	<?php global $FETCHINFO; ?><div class="footer">
+	<div class="footer">
 		<div class="container">
 			<div class="w3_footer_grids">
 				<div class="col-md-3 w3_footer_grid">
@@ -16,18 +16,6 @@
 						<li><a href="?content=about">About Us</a></li>
 						<li><a href="?content=mailus">Contact Us</a></li>
 						
-					</ul>
-				</div>
-				<div class="col-md-3 w3_footer_grid">
-					<h3>Category</h3>
-					<ul class="info"> 
-						<?php 
-							$categoryArray = $FETCHINFO::getCategoryArray();
-
-							foreach ($categoryArray as $key => $value) {
-								?><li><a href="?content=products&category=<?php echo $value['CategoryID'] ?>"><?php echo $value['CategoryName']; ?></a></li><?php
-							}
-						 ?>
 					</ul>
 				</div>
 				<div class="col-md-3 w3_footer_grid">

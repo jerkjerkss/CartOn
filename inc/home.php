@@ -477,9 +477,7 @@
 								<div class="banner-wrap">
 									<div class="w3agile_special_deals_grid_left_grid1">
 										<img src="images/1.png" alt=" " class="img-responsive" />
-										<p>Quis autem vel eum iure reprehenderit qui in ea voluptate 
-											velit esse quam nihil molestiae consequatur, vel illum qui dolorem 
-											eum fugiat quo voluptas nulla pariatur</p>
+										<p>Life is not easy, just enjoy it and don't waste your time.</p>
 										<h4>Laura</h4>
 									</div>
 								</div>
@@ -488,9 +486,7 @@
 								<div class="banner-wrap">
 									<div class="w3agile_special_deals_grid_left_grid1">
 										<img src="images/2.png" alt=" " class="img-responsive" />
-										<p>Quis autem vel eum iure reprehenderit qui in ea voluptate 
-											velit esse quam nihil molestiae consequatur, vel illum qui dolorem 
-											eum fugiat quo voluptas nulla pariatur</p>
+										<p>Everything has a reason. <br> Maybe its time to make a change.</p>
 										<h4>Michael</h4>
 									</div>
 								</div>
@@ -499,9 +495,7 @@
 								<div class="banner-wrap">
 									<div class="w3agile_special_deals_grid_left_grid1">
 										<img src="images/3.png" alt=" " class="img-responsive" />
-										<p>Quis autem vel eum iure reprehenderit qui in ea voluptate 
-											velit esse quam nihil molestiae consequatur, vel illum qui dolorem 
-											eum fugiat quo voluptas nulla pariatur</p>
+										<p>You don't need to walk just to buy something. <br>Use your gadgets and you'll be fine.</p>
 										<h4>Rosy</h4>
 									</div>
 								</div>

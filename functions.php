@@ -15,6 +15,10 @@ function getFooterContents(){
     include('inc/footer.php');
 }
 
+function getFooterContentsClient(){
+    include('inc/client-footer.php');
+}
+
 function getHeaderObjects(){
 	?>
 	<div class="header" id="header">
@@ -116,6 +120,27 @@ function ___inc_account(){
 	include('inc/account.php');
 	inject_asset('stylesheet', 'css/account.css');
 }
+
+function ___client_dashboard(){
+	include('inc/client-dashboard.php');
+}
+
+function ___client_products(){
+	include('inc/client-products.php');
+}
+
+function ___client_orders(){
+	include('inc/client-orders.php');
+}
+
+function ___client_management(){
+	include('inc/client-management.php');
+}
+
+function ___client_account(){
+	include('inc/client-account.php');
+}
+
 
 // asset injector
 function inject_asset($type, $url){

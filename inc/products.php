@@ -112,7 +112,7 @@
 					<div class="w3ls_dresses_grid_right_grid3">
 
 							<!-- products here -->
-							<?php show_products(); ?>
+							<?php show_products(15); ?>
 
 
 					</div>

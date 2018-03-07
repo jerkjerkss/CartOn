@@ -2,7 +2,9 @@
 <!-- banner -->
 	<div class="banner1" id="home1">
 		<div class="container">
-			<h2>trendy fashion dresses<span>up to</span> 30% <i>Discount</i></h2>
+			<h2 style="padding-left: 0px;">trendy fashion dresses
+				<span style="margin-left: 0px; margin-bottom: 0px;margin-top: 0px;">up to</span> 
+				30% <i>Discount</i></h2>
 		</div>
 	</div>
 <!-- //banner -->
@@ -79,7 +81,7 @@
 						<div class="w3ls_dresses_grid_right_grid1">
 							<img src="images/48.jpg" alt=" " class="img-responsive" />
 							<div class="w3ls_dresses_grid_right_grid1_pos">
-								<h3>Printed <span>Cotton</span> Top</h3>
+								<h3 style="text-shadow: 0px 0px 15px rgba(0, 0, 28, 0.7);">Latest <span>Gadgets</span> Today</h3>
 							</div>
 						</div>
 					</div>
@@ -87,7 +89,7 @@
 						<div class="w3ls_dresses_grid_right_grid1">
 							<img src="images/49.jpg" alt=" " class="img-responsive" />
 							<div class="w3ls_dresses_grid_right_grid1_pos1">
-								<h3>Printed Blue <span>Cotton</span> Jeans</h3>
+								<h3 style="text-shadow: 0px 0px 15px rgba(0, 0, 28, 0.7);">Branded<span>Stylish</span> Shoes</h3>
 							</div>
 						</div>
 					</div>

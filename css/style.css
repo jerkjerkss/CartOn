@@ -1498,11 +1498,12 @@ h3.other-nw {
 .banner1 h2,.banner2 h2,.banner3 h2,.banner4 h2,.banner5 h2,.banner6 h2,.banner7 h2,.banner8 h2,.banner9 h2{
     font-size: 2em;
     text-transform: uppercase;
-    color:#ffffff;
+    color: #ffffff;
     line-height: 1.5em;
     padding: 3em 0 0 4em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: azo sans;
     letter-spacing: 4px;
+    text box-shadow:;
 }
 .banner1 h2 span,.banner2 h2 span,.banner3 h2 span,.banner4 h2 span,.banner5 h2 span,.banner6 h2 span,.banner7 h2 span,.banner8 h2 span,.banner9 h2 span{
     display: block;

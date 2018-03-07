@@ -121,16 +121,20 @@ function ___inc_account(){
 	inject_asset('stylesheet', 'css/account.css');
 }
 
+
 function ___client_dashboard(){
 	include('inc/client-dashboard.php');
+	inject_asset('stylesheet', 'css/dashboard.css');
 }
 
 function ___client_products(){
 	include('inc/client-products.php');
+	inject_asset('stylesheet', 'css/products.css');
 }
 
 function ___client_orders(){
 	include('inc/client-orders.php');
+	inject_asset('stylesheet', 'css/orders.css');
 }
 
 function ___client_management(){

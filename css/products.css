@@ -1,0 +1,223 @@
+.heading
+	{
+		padding-top: 5%;
+		padding-bottom: 1%;
+		font-size: 4em;
+	}
+.btn-option .btnop{
+    background-color: #d2d2d2; /* Green */
+    border: none;
+    color: black;
+    padding: 4px 13px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.btn-option .btnop:hover {
+    background-color: #3e8e41;
+    transition: 0.5s;
+}
+.btn-option .btnop:active {
+    background-color: #00b2a3;
+}
+
+.addbtn
+	{
+		border: none;
+		border-radius: 50px;
+		background-color: #18822e;
+		font-size: 1.3em;
+		font-family: azo sans;
+		font-weight: bold;
+		color: white;
+		padding: 10px;
+		transition: 0.5s;
+		width: 200px;
+	}
+.addbtn:hover
+	{
+		border-radius: 50px;
+		background-color: #188279;
+		transition: 0.5s;
+	}
+
+/*<------------------------- L I S T ---------------------------->*/
+
+.thumb
+	{
+	width: 50%;
+	}
+.delete
+	{
+	font-size: .8em; font-weight: bold;
+	background-color: white;
+	width:106px;
+    color: #f44336; 
+    border: 2px solid #f44336;
+    margin-bottom: 2px;
+    transition: 0.5s;
+	}
+.delete:hover
+	{
+	background-color: #f44336;
+    color: white;
+    transition: 0.5s;
+	}
+.edit
+	{
+	font-size: .8em; font-weight: bold;
+	background-color: white;
+	width:106px;
+    color: #4CAF50; 
+    border: 2px solid #4CAF50;
+    transition: 0.5s;
+	}
+.edit:hover
+	{
+	background-color: #4CAF50;
+    color: white;
+    transition: 0.5s;
+	}
+
+table {
+    border-collapse: collapse;
+    width: 800px;
+    height: 200px;
+    margin-bottom: 10%;
+	}
+
+th, td {
+    text-align: left;
+    font-size: 1.3em;
+    padding: 8px;
+    font-family: azo sans;
+    width: 200px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #188279;
+    color: white;
+    font-weight: bold;
+}
+
+/*<------------------------- G R I D ---------------------------->*/
+
+.rowalign
+	{
+		padding-left: 100px;
+	}
+ul.producthandler
+{
+  height: 80%;
+  list-style: none;
+}
+
+div ul li.product
+  {
+    width: 22%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 4% 1% 1% 1%;
+    font-family: century gothic;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+  }
+div ul li.product:hover
+  {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    transition: 0.2s;
+    box-shadow: 0px 0px 30px #03867b;
+  } 
+img.productimage
+  {
+    border: 10px; 
+    border-radius: 4px;  
+    padding: 5%; 
+    height: 285px;
+    width: 100%;
+  }
+p.itmname{ font-size: 150%; font-weight:bold;}
+
+.edtbtn
+{
+   padding: 7px;
+   width: 80px;
+   margin-left: auto;
+   background-color: #00b2a3;
+   font-family: azo sans;
+   text-anchor: middle;
+   color: white;
+ }
+ .edtbtn:hover 
+  {
+    background-color: #25bf52;
+    color: white;
+  }
+.dltbtn
+{
+   padding: 7px;
+   width: 80px;
+   margin-left: auto;
+   background-color: #00b2a3;
+   font-family: azo sans;
+   text-anchor: middle;
+   color: white;
+ }
+ .dltbtn:hover 
+  {
+    background-color: #ec3a2d;
+    color: white;
+  }
+
+  @media screen and (max-width: 786px){
+  div ul li.product {
+    width: 44%;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 4% 1% 1% 1%;
+    font-family: century gothic;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 567px){
+  div ul li.product {
+    width: 326px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 4% 1% 1% 14%;
+    font-family: century gothic;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 460px){
+  div ul li.product {
+    width: 326px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 4% 1% 1% 5%;
+    font-family: century gothic;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 386px){
+  div ul li.product {
+    width: 287px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 4% 1% 1% 1%;
+    font-family: century gothic;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+  }
+}

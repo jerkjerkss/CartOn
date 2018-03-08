@@ -122,7 +122,7 @@
 	</div>
 	
 
-	<?php getHeaderObjects(); ?>
+	<?php getHeaderObjects(0); ?>
 	<div class="navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -152,8 +152,6 @@
 		___inc_products();
 	}else if($pager == "about"){
 		___inc_about();
-	}else if($pager == "checkout"){
-		___inc_checkout();
 	}else if($pager == "mailus"){
 		___inc_mailus();
 	}else {
@@ -164,6 +162,8 @@
  ?>
 
 <script type="text/javascript" src="js/login.js"></script>
+
+
 
 </body>
 </html>

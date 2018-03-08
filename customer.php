@@ -25,7 +25,7 @@
 	
 <body>
 <!-- header -->
-	<?php getHeaderObjects(); ?>
+	<?php getHeaderObjects($_SESSION['userInfo']); ?>
 	<div class="navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">
@@ -68,7 +68,7 @@
 
 	getFooterContents();
  ?>
-
+<script type="text/javascript" src="js/cart.js"></script>
 
 </body>
 </html>

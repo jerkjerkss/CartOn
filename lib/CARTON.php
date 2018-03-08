@@ -60,7 +60,7 @@ class CARTON{
 		$index = 0;
 
 		$where = $where != "" ? "WHERE $where" : $where;
-		$sql = "SELECT $select FROM $from ". $where;	
+		$sql = "SELECT $select FROM $from ".$where;	
 		$result = self::xdline_connect($ini_file_dir)->query($sql);
 		if ($result->num_rows > 0) {
 			    // output data of each row

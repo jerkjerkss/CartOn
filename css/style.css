@@ -570,6 +570,7 @@ ul.multi-column-dropdown h6 {
     background:#ff9b05;
     color:#fff;
     border:1px solid #ff9b05;
+    cursor: pointer;
 }
 /*-- image-hover --*/
 .w3_hs_bottom{
@@ -2547,6 +2548,7 @@ table.timetable_sub {
 }
 .timetable_sub td {
     border:1px solid #CDCDCD;
+    white-space: nowrap;
 }
 td.invert-image a img {
     width:30%;
@@ -2555,7 +2557,7 @@ td.invert-image a img {
 .rem{
     position:relative;
 }
-.close1,.close2,.close3 {
+.close {
     background: url('../images/close.png') no-repeat 0px 0px;
     cursor: pointer;
     width: 32px;
@@ -2592,7 +2594,6 @@ td.invert-image a img {
 }
 .checkout-right-basket{
     float: right;
-    margin: 8em 0 0 0em;
 }
 .checkout-left-basket ul li span {
     float: right;

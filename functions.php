@@ -19,7 +19,8 @@ function getFooterContentsClient(){
     include('inc/client-footer.php');
 }
 
-function getHeaderObjects(){
+function getHeaderObjects($userInfoArray){
+
 	?>
 	<div class="header" id="header">
 		<div class="container">
@@ -52,7 +53,7 @@ function getHeaderObjects(){
 			</div>
 			<?php 
 				if (basename($_SERVER["SCRIPT_FILENAME"]) == "customer.php") {
-					getCart();
+					getCart($userInfoArray);
 				}
 			 ?>
 
@@ -82,15 +83,15 @@ function ___navigation_bar($nav_array){
 	<?php
 }
 
-function getCart(){
+function getCart($userInfoArray){
+	global $FINFO;
 	?>
 	<div class="cart box_1">
 		<a href="?content=checkout">
-			<div class="total">
-			<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
+			<div class="total">Php <span id="cart-price"><?php echo number_format((float)$FINFO->getItems($userInfoArray['UserID'])['Price'], 2, '.', ''); ?></span> (<span id="cart-items"><?php echo $FINFO->getItems($userInfoArray['UserID'])['Items']; ?></span> items)</div>
 			<img src="images/bag.png" alt="" />
 		</a>
-		<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+		<p><a class="simpleCart_empty"><?php echo $userInfoArray['UserFirstName']." ".$userInfoArray['UserLastName']; ?></a></p>
 		<div class="clearfix"> </div>
 	</div>	
 	<?php
@@ -202,12 +203,12 @@ function show_products($toShow = -1){
 			</div>
 			<h5><a href="#" title="<?php echo $products['ProductName'] ?>"><?php echo $products['ProductName'] ?></a></h5>
 			<div class="simpleCart_shelfItem">
-				<p><span>$420</span> <i class="item_price">Php <?php echo $products['ProductPrice']; ?></i></p>
-				<p><a class="item_add" href="#">Add to cart</a></p>
+				<p><span></span> Php <i class="item_price" id="price-<?php echo $products['ProductID'] ?>"><?php echo $products['ProductPrice']; ?></i></p>
+				<p><a class="item-add scroll" href="#header" value='<?php echo $products['ProductID'] ?>'>Add to cart</a></p>
 			</div>
 			
 				<?php 
-					if ($dateRange <= 10) {
+					if ($dateRange <= 7) {
 						echo '<div class="dresses_grid_pos"><h6>New</h6></div>';
 					}
 				 ?>
@@ -255,7 +256,7 @@ function show_products($toShow = -1){
 							</div>
 							<div class="modal_body_right_cart simpleCart_shelfItem">
 								<p><span>$320</span> <i class="item_price">Php <?php echo $products['ProductPrice']; ?></i></p>
-								<p><a class="item_add" href="#">Add to cart</a></p>
+								<p><a class="item-add" href="#" value='<?php echo $products['ProductID'] ?>'>Add to cart</a></p>
 							</div>
 							<h5>Color</h5>
 							<div class="color-quality">

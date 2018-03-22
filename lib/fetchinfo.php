@@ -22,6 +22,11 @@ class FetchInfo extends CARTON
 	function getOrders($UserID){
 		return parent::select("*", "`orders` INNER JOIN `products`", "`UserID` = '$UserID' AND `products`.`ProductID` = `orders`.`ProductID` AND `orders`.`OrderStatus` = 'Cart'", 'config.ini');
 	}
+
+	function getClientProducts($clientInfo){
+		$SellerGroupID = $clientInfo['SellerGroupID'];
+		return parent::select("*", "products", "`SellerGroupID` = $SellerGroupID", 'config.ini');
+	}
 }
 
 

@@ -26,7 +26,7 @@ function getHeaderObjects($userInfoArray){
 		<div class="container">
 			<div class="w3l_login">
 				<?php 
-					if (basename($_SERVER["SCRIPT_FILENAME"]) == "customer.php") {
+					if (basename($_SERVER["SCRIPT_FILENAME"]) == "customer.php" || basename($_SERVER["SCRIPT_FILENAME"]) == "client.php") {
 						?> 
 							<a href="lib/logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"><br>Logout</span></a>
 						<?php

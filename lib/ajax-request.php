@@ -50,7 +50,14 @@
 		}else {
 			$_SESSION['userInfo'] = $userInfo;
 			echo 'LOGIN SUCCESS: '.$_SESSION['userInfo']['UserAccess'];
+
+			if ($_SESSION['userInfo']['UserAccess'] == "client") {
+				$UserID = $_SESSION['userInfo']['UserID'];
+				$clientInfo = $CARTON::select("*", "seller", "`UserID` = '$UserID'")[0];
+				$_SESSION['clientInfo'] = $clientInfo;
+			}
 		}
+
 	}
 
 	function addcart($ProductID, $adder = 1){

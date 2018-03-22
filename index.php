@@ -2,8 +2,11 @@
 	session_start();
 	if (isset($_SESSION['userInfo'])) {
       switch ($_SESSION['userInfo']['UserAccess']) {
-              case 'customer':
+            case 'customer':
                 header('Location: customer');
+                break;
+            case 'client':
+                header('Location: client');
                 break;
             }
     }

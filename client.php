@@ -1,14 +1,15 @@
 <?php include_once('functions.php'); 
 	session_start();
-	// if (isset($_SESSION['userInfo'])) {
- //      switch ($_SESSION['userInfo']['UserAccess']) {
- //              case 'customer':
- //                break;
- //            }
- //    }else {
- //        header('Location: index');
- //    }
-$_SESSION['userInfo'] = "";
+	if (isset($_SESSION['userInfo'])) {
+      switch ($_SESSION['userInfo']['UserAccess']) {
+            case 'customer':
+            	break;
+            case 'client':
+            	break;
+            }
+    }else {
+        header('Location: index');
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,6 @@ $_SESSION['userInfo'] = "";
 	<div class="navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">
-				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header nav_2">
 					<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
 						<span class="sr-only">Toggle navigation</span>
@@ -65,7 +65,6 @@ $_SESSION['userInfo'] = "";
 		___client_dashboard();
 	}
 
-	getFooterContentsClient();
  ?>
 
 

@@ -1,5 +1,5 @@
 <?php include_once('functions.php'); 
-	// session_start();
+	session_start();
 	// if (isset($_SESSION['userInfo'])) {
  //      switch ($_SESSION['userInfo']['UserAccess']) {
  //              case 'customer':
@@ -8,6 +8,7 @@
  //    }else {
  //        header('Location: index');
  //    }
+$_SESSION['userInfo'] = "";
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +26,7 @@
 	
 <body>
 <!-- header -->
-	<?php getHeaderObjects(); ?>
+	<?php getHeaderObjects($_SESSION['userInfo']); ?>
 	<div class="navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">

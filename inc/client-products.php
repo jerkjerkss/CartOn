@@ -1,3 +1,10 @@
+<?php  
+	$view = "";
+  	if(isset($_REQUEST['view'])) :
+    $view = $_REQUEST['view'];
+  	endif;
+?>
+
 <center>
 		<h1 class="heading">PRODUCTS</h1>
 
@@ -10,13 +17,13 @@
 <br>
 
 	<div class="btn-option">
-		<button class="btnop"><i class="fas fa-th-large"></i>GRID</button>
-		<button class="btnop"><i class="fas fa-list"></i>LIST</button>
+		<a href="?content=products&view=grid"><button class="btnop"><i class="fas fa-th-large"></i>GRID</button></a>
+		<a href="?content=products&view=list"><button class="btnop"><i class="fas fa-list"></i>LIST</button></a>
 	</div> 
 
 <br>
-
-		<table>
+<?php if ($view == "list"){ ?>
+	<table>
 		  <tr>
 		    <th>Product</th>
 		    <th>Name</th>
@@ -57,7 +64,7 @@
 		    </td>		    
 		  </tr>	
 		</table>
-
+<?php }else { ?>
 <div class="col-md-12 col-sm-12" style="padding-bottom: 113px;padding-right: 0px;padding-left: 50px;">  
 		<div class="row">
 	        <ul class="producthandler">                             
@@ -108,6 +115,6 @@
 	        </ul>
 	    </div>
 	</div>
-
+<?php } ?>
 
 </center>

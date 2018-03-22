@@ -27,6 +27,11 @@ class FetchInfo extends CARTON
 		$SellerGroupID = $clientInfo['SellerGroupID'];
 		return parent::select("*", "products", "`SellerGroupID` = $SellerGroupID", 'config.ini');
 	}
+
+
+
+	
+
 }
 
 

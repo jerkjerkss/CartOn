@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2018 at 06:00 AM
+-- Generation Time: Mar 22, 2018 at 09:47 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.27
 
@@ -21,6 +21,40 @@ SET time_zone = "+00:00";
 --
 -- Database: `onlineshoppingdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logs`
+--
+-- Creation: Mar 22, 2018 at 08:18 AM
+--
+
+DROP TABLE IF EXISTS `logs`;
+CREATE TABLE IF NOT EXISTS `logs` (
+  `LogID` int(11) NOT NULL AUTO_INCREMENT,
+  `UserID` int(11) NOT NULL,
+  `LogOperation` varchar(200) NOT NULL,
+  `LogDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `LogDeviceType` varchar(20) NOT NULL,
+  `LogIPAddress` varchar(100) NOT NULL,
+  `LogHTMLEntities` varchar(500) NOT NULL,
+  PRIMARY KEY (`LogID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONSHIPS FOR TABLE `logs`:
+--   `UserID`
+--       `users` -> `UserID`
+--
+
+--
+-- Dumping data for table `logs`
+--
+
+INSERT INTO `logs` (`LogID`, `UserID`, `LogOperation`, `LogDate`, `LogDeviceType`, `LogIPAddress`, `LogHTMLEntities`) VALUES
+(10, 3, 'Login', '2018-03-22 08:46:35', 'Computer', 'IP: 112.198.78.121', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(11, 3, 'Logout', '2018-03-22 08:46:56', 'Computer', 'IP: 112.198.78.121', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -328,7 +362,7 @@ CREATE TABLE IF NOT EXISTS `seller` (
   `SellerGroupID` int(12) NOT NULL,
   `UserID` int(12) NOT NULL,
   PRIMARY KEY (`SellerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- RELATIONSHIPS FOR TABLE `seller`:
@@ -337,6 +371,13 @@ CREATE TABLE IF NOT EXISTS `seller` (
 --   `UserID`
 --       `users` -> `UserID`
 --
+
+--
+-- Dumping data for table `seller`
+--
+
+INSERT INTO `seller` (`SellerID`, `SellerGroupID`, `UserID`) VALUES
+(1, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -411,14 +452,18 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`UserID`, `UserEmail`, `UserPassword`, `UserToken`, `UserAccess`, `UserFirstName`, `UserLastName`, `UserCity`, `UserState`, `UserZip`, `UserEmailVerified`, `UserRegistrationDate`, `UserVerificationCode`, `UserIP`, `UserPhone`, `UserFax`, `UserCountry`, `UserAddress`, `UserAddress2`) VALUES
 (5, 'ardieharold@gmail.com', 'JElIdsZqZR8bPaLLxE3d66xmwS6r2PWHzkm_fBX885w', '', 'customer', 'Ardie Harold', 'Hayag', NULL, NULL, NULL, 0, '2018-03-17 09:18:24', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'winner85@gmail.com', 'H12rmiir2S-P7osMTLMoOWc0F31pGbngZ8PihzMjtuo', '', 'customer', 'Erwin', 'Hayag', NULL, NULL, NULL, 0, '2018-03-08 08:40:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'cart@on.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'customer', 'Cart', 'On', NULL, NULL, NULL, 0, '2018-03-03 10:07:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(4, 'winner85@gmail.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'customer', 'Erwin', 'Hayag', NULL, NULL, NULL, 0, '2018-03-08 08:40:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'cart@on.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'client', 'Cart', 'Online', NULL, NULL, NULL, 0, '2018-03-03 10:07:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 
 --
 -- Metadata
 --
 USE `phpmyadmin`;
+
+--
+-- Metadata for table logs
+--
 
 --
 -- Metadata for table optiongroups
@@ -476,6 +521,7 @@ INSERT INTO `pma__table_uiprefs` (`username`, `db_name`, `table_name`, `prefs`, 
 --
 
 INSERT INTO `pma__relation` (`master_db`, `master_table`, `master_field`, `foreign_db`, `foreign_table`, `foreign_field`) VALUES
+('onlineshoppingdb', 'logs', 'UserID', 'onlineshoppingdb', 'users', 'UserID'),
 ('onlineshoppingdb', 'orders', 'ProductID', 'onlineshoppingdb', 'products', 'ProductID'),
 ('onlineshoppingdb', 'orders', 'UserID', 'onlineshoppingdb', 'users', 'UserID'),
 ('onlineshoppingdb', 'productoptions', 'OptionGroupID', 'onlineshoppingdb', 'optiongroups', 'OptionGroupID'),

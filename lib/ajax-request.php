@@ -40,7 +40,8 @@
 	function signin($email, $password){
 		session_start();
 		$CARTON = "CARTON";
-		$CART = new $CARTON;	
+		$CART = new $CARTON;
+
 		$salted_password = $CART->encrypt_password($password);
 		$userInfo = $CARTON::select("*", "users", "`UserEmail` = '$email' && `UserPassword` = '$salted_password'")[0];
 
@@ -51,11 +52,14 @@
 			$_SESSION['userInfo'] = $userInfo;
 			echo 'LOGIN SUCCESS: '.$_SESSION['userInfo']['UserAccess'];
 
+			$CART->logs($userInfo['UserID'], 'Login');
 			if ($_SESSION['userInfo']['UserAccess'] == "client") {
 				$UserID = $_SESSION['userInfo']['UserID'];
 				$clientInfo = $CARTON::select("*", "seller", "`UserID` = '$UserID'")[0];
 				$_SESSION['clientInfo'] = $clientInfo;
 			}
+
+
 		}
 
 	}

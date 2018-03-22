@@ -234,5 +234,25 @@ class CARTON{
     	$decrypttext = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, $crypttext, MCRYPT_MODE_ECB, $iv);
     	return trim($decrypttext);
     }    
+
+    // start set logs
+	public function logs($UserID, $LogOperation){
+		require_once 'Mobile_Detect.php';
+		$detect = new Mobile_Detect;
+		$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'Tablet' : 'Phone') : 'Computer');
+		$htmlentities = htmlentities($_SERVER['HTTP_USER_AGENT']);
+		$externalIp = 'IP: '.file_get_contents('http://ipecho.net/plain');
+
+
+
+		$logArray = array('UserID' => $UserID,
+						'LogOperation' => $LogOperation,
+						'LogDeviceType' => $deviceType,
+						'LogIPAddress' => $externalIp,
+						'LogHTMLEntities' => $htmlentities);
+
+		return self::insert("logs", $logArray);
+	}
+	// end set logs
 }
  ?>

@@ -30,5 +30,4 @@ class FetchInfo extends CARTON
 }
 
 
-
 ?>

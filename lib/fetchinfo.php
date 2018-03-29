@@ -5,6 +5,9 @@ class FetchInfo extends CARTON
 	
 	function getCategoryArray(){
 		return parent::select('*', 'productcategories', '1', 'config.ini');
+	}
+	function getSubCategoryArray(){
+		return parent::select('*', 'productsubcategories', '1', 'config.ini');
 	}	
 
 	function getProductArray(){

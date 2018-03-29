@@ -36,6 +36,7 @@
 
 								<?php 
 									$categoryArray = $FETCHINFO::getCategoryArray();
+									$subCategoryArray = $FETCHINFO::getSubCategoryArray();
 									foreach ($categoryArray as $key => $value) {
 									?>
 									<div class="panel panel-default">
@@ -49,10 +50,15 @@
 										<div id="collapse-<?php echo $key; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $key; ?>">
 										   <div class="panel-body panel_text">
 											<ul>
-												<li><a href="#">Product 1</a></li>
-												<li><a href="#">Product 2</a></li>
-												<li><a href="#">Product 3</a></li>
-												<li><a href="#">Product 4</a></li>
+												<?php 
+													foreach ($subCategoryArray as $keys => $values) {
+														if ($values['CategoryID'] == $value['CategoryID']) {
+															?>
+																<li><a href="?content=products&filter=<?php echo $values['SubCategoryID'] ?>"><?php echo $values['SubCategoryName'] ?></a></li>
+															<?php
+														}
+													}
+												 ?>
 											</ul>
 										  </div>
 										</div>
@@ -114,7 +120,15 @@
 					<div class="w3ls_dresses_grid_right_grid3">
 
 							<!-- products here -->
-							<?php show_products(15); ?>
+							<?php 
+								if(isset($_REQUEST['filter'])){
+									show_products(15, $_REQUEST['filter']);
+								}else {
+									show_products(15); 
+								}
+								
+
+							?>
 
 
 					</div>

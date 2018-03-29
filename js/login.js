@@ -41,17 +41,13 @@ function signin(email = $("#signin-email").val(), password = $("#signin-pwd").va
     	data["pwd"] = password;
 
         $.post("lib/ajax-request.php", {data: data}, function(callback){
-            if(callback == "LOGIN SUCCESS: customer"){
+            if(callback == "LOGIN SUCCESS: customer" || callback == "LOGIN SUCCESS: client"){
             	location.reload();
-            }else if(callback == "LOGIN SUCCESS: client"){
-                location.reload();
             }else {
             	$("#signin-loading").hide();
 			    $(".sign-in").show();
 			    $("#signin-primary-alert").show();
             }
-            console.log(callback);
-
         });
     }, 1000);
 }

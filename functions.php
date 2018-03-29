@@ -167,13 +167,16 @@ function inject_asset($type, $url){
 
 
 
-function show_products($toShow = -1){
+function show_products($toShow = -1, $filter = 0){
 	global $FETCHINFO;
 	$productArray = $FETCHINFO::getProductArray();
 	foreach ($productArray as $key => $products) {
 
 		if ($key == $toShow) {
 			break;
+		}
+		if ($products['SubCategoryID'] != $filter && $filter !=0) {
+			continue;
 		}
 		$ImageArray = explode("|||", $products['ProductImage']);
 		$datetime1 = date_create($products['ProductUpdateDate']);

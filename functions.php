@@ -45,7 +45,8 @@ function getHeaderObjects($userInfoArray){
 				<input class="search_box" type="checkbox" id="search_box">
 				<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
 				<div class="search_form">
-					<form action="#" method="post">
+					<form action="" method="get">
+						<input type="text" name="content" value="products" style="display: none;">
 						<input type="text" name="Search" placeholder="Search...">
 						<input type="submit" value="Send">
 					</form>
@@ -167,9 +168,14 @@ function inject_asset($type, $url){
 
 
 
-function show_products($toShow = -1, $filter = 0){
+function show_products($toShow = -1, $filter = 0, $Search = -1){
 	global $FETCHINFO;
 	$productArray = $FETCHINFO::getProductArray();
+
+	if ($Search != -1) {
+		$productArray = $FETCHINFO::searchProducts($Search);
+	}
+	
 	foreach ($productArray as $key => $products) {
 
 		if ($key == $toShow) {
@@ -178,6 +184,9 @@ function show_products($toShow = -1, $filter = 0){
 		if ($products['SubCategoryID'] != $filter && $filter !=0) {
 			continue;
 		}
+
+		
+
 		$ImageArray = explode("|||", $products['ProductImage']);
 		$datetime1 = date_create($products['ProductUpdateDate']);
 		$datetime2 = date_create(date("Y-m-d H:i:s"));

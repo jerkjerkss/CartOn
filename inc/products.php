@@ -121,7 +121,9 @@
 
 							<!-- products here -->
 							<?php 
-								if(isset($_REQUEST['filter'])){
+								if (isset($_REQUEST['Search'])) {
+									show_products(15, 0 , $_REQUEST['Search']);
+								}else if(isset($_REQUEST['filter'])){
 									show_products(15, $_REQUEST['filter']);
 								}else {
 									show_products(15); 

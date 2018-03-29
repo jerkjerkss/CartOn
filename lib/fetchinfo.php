@@ -31,8 +31,9 @@ class FetchInfo extends CARTON
 		return parent::select("*", "products", "`SellerGroupID` = $SellerGroupID", 'config.ini');
 	}
 
-
-
+	function searchProducts($searchName){
+		return parent::select('*', 'products', "`ProductName` LIKE '%$searchName%' ORDER BY `ProductUpdateDate` DESC", 'config.ini');
+	}
 	
 
 }

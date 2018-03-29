@@ -14,15 +14,23 @@
 
 <?php if ($view == "additem") { ?>
 
-<!-- ADD ITEM CONTENTS HERE -->
-ADD ITEM CONTENTS HERE<br>
-ADD ITEM CONTENTS HERE<br>
-ADD ITEM CONTENTS HERE<br>
-ADD ITEM CONTENTS HERE<br>
-ADD ITEM CONTENTS HERE<br>
-ADD ITEM CONTENTS HERE<br>
-<!-- ADD ITEM CONTENTS HERE -->
-<?php }else { ?>
+	<!-- ADD ITEM CONTENTS -->
+		<h1 class="heading">ADD PRODUCT</h1>
+		<form>
+			  <input type="text" id="pname"  placeholder="Product Name">
+			  <br>
+			  <textarea id="pdes" placeholder="Product Description.." style="height:100px; width: 50%"></textarea>
+			  <br>
+			  <input type="text" id="pprice"  placeholder="Product Price">
+			  <br>
+			  <button class="addbtn"><i class="fas fa-plus-circle"></i> Add Product </button>
+		</form>
+
+	<!-- ADD ITEM CONTENTS -->
+<?php }
+
+
+else { ?>
 	<h1 class="heading">PRODUCTS</h1>
 	<a href="?content=products&view=additem"><button class="addbtn"><i class="fas fa-plus-circle"></i> Add Item </button></a>
 	<br>
@@ -38,10 +46,10 @@ ADD ITEM CONTENTS HERE<br>
 <?php if ($view == "list"){ ?>
 	<table>
 		  <tr>
-		    <th>Product</th>
-		    <th>Name</th>
-		    <th>Price</th>
-		    <th>Manage</th>
+		    <th>PRODUCT</th>
+		    <th>NAME</th>
+		    <th>PRICE</th>
+		    <th>MANAGE</th>
 		  </tr>
 
 		  <?php 

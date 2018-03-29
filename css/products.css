@@ -1,11 +1,11 @@
 .heading
-	{
-		padding-top: 5%;
-		padding-bottom: 1%;
-		font-size: 4em;
-	}
+  {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    font-size: 4em;
+  }
 .btn-option .btnop{
-    background-color: #d2d2d2; /* Green */
+    background-color: #d2d2d2;
     border: none;
     color: black;
     padding: 4px 13px;
@@ -23,70 +23,108 @@
     background-color: #00b2a3;
 }
 
+/*<------------------------- A D D   I T E M ---------------------------->*/
+
 .addbtn
-	{
-		border: none;
-		border-radius: 50px;
-		background-color: #18822e;
-		font-size: 1.3em;
-		font-family: azo sans;
-		font-weight: bold;
-		color: white;
-		padding: 10px;
-		transition: 0.5s;
-		width: 200px;
-	}
+  {
+    border: none;
+    border-radius: 50px;
+    background-color: #18822e;
+    font-size: 1.3em;
+    font-family: azo sans;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+    width: 200px;
+    margin-top: 15px;
+  }
 .addbtn:hover
-	{
-		border-radius: 50px;
-		background-color: #188279;
-		transition: 0.5s;
-	}
+  {
+    border-radius: 50px;
+    background-color: #188279;
+    transition: 0.5s;
+  }
+  form  
+  { 
+    margin-bottom: 10%;
+  }
+  input[type=text] 
+  {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 1px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  input[type=text]:focus 
+  {
+      border: 3px solid #00b2a3;
+  }
+  textarea
+  {
+     width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  textarea:focus 
+  {
+      border: 3px solid #00b2a3;
+  }
 
 /*<------------------------- L I S T ---------------------------->*/
 
 .thumb
-	{
-	width: 50%;
-	}
+  {
+  width: 50%;
+  }
 .delete
-	{
-	font-size: .8em; font-weight: bold;
-	background-color: white;
-	width:106px;
+  {
+  font-size: .8em; font-weight: bold;
+  background-color: white;
+  width:106px;
     color: #f44336; 
     border: 2px solid #f44336;
     margin-bottom: 2px;
     transition: 0.5s;
-	}
+  }
 .delete:hover
-	{
-	background-color: #f44336;
+  {
+  background-color: #f44336;
     color: white;
     transition: 0.5s;
-	}
+  }
 .edit
-	{
-	font-size: .8em; font-weight: bold;
-	background-color: white;
-	width:106px;
+  {
+  font-size: .8em; font-weight: bold;
+  background-color: white;
+  width:106px;
     color: #4CAF50; 
     border: 2px solid #4CAF50;
     transition: 0.5s;
-	}
+  }
 .edit:hover
-	{
-	background-color: #4CAF50;
+  {
+  background-color: #4CAF50;
     color: white;
     transition: 0.5s;
-	}
+  }
 
 table {
     border-collapse: collapse;
     width: 800px;
     height: 200px;
     margin-bottom: 10%;
-	}
+  }
 
 th, td {
     text-align: left;
@@ -102,14 +140,15 @@ th {
     background-color: #188279;
     color: white;
     font-weight: bold;
+    font-family: century gothic;
 }
 
 /*<------------------------- G R I D ---------------------------->*/
 
 .rowalign
-	{
-		padding-left: 100px;
-	}
+  {
+    padding-left: 100px;
+  }
 ul.producthandler
 {
   height: 80%;
@@ -141,7 +180,12 @@ img.productimage
     height: 285px;
     width: 100%;
   }
-p.itmname{ font-size: 150%; font-weight:bold;}
+p.itmname
+  {
+    font-size: 150%;
+    font-weight:bold;
+    height: 6em;
+  }
 
 .edtbtn
 {

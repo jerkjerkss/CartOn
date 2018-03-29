@@ -5,12 +5,13 @@
   	endif;
  ?>
 <center>
-<a href="?content=orders&manage=pending">Pending</a>-----
-<a href="?content=orders&manage=processing">Processing</a>----- 
-<a href="?content=orders&manage=shipping">Shipping</a>-----
-<a href="?content=orders&manage=delivered">Delivered</a>-----
-<a href="?content=orders&manage=list">List of Orders</a>
-
+	<div class="cont">
+		<a href="?content=orders&manage=pending" class="processstyle">PENDING</a>-----
+		<a href="?content=orders&manage=processing" class="processstyle">PROCESSING</a>----- 
+		<a href="?content=orders&manage=shipping" class="processstyle">SHIPPING</a>-----
+		<a href="?content=orders&manage=delivered" class="processstyle">DELIVERED</a>-----
+		<a href="?content=orders&manage=list" class="processstyle">LIST OF ORDERS</a>
+	</div>
 <?php if ($manage == "pending") { ?>
 	<table>
 		  <tr class="trsize">

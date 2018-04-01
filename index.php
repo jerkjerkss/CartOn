@@ -32,9 +32,9 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					<button style="margin-top: 20px;" type="button" class="close" data-dismiss="modal" aria-hidden="true">
 						&times;</button>
-					<h4 class="modal-title" id="myModalLabel">
+					<h4 style="margin-top: 20px;" class="modal-title" id="myModalLabel">
 						Login Now!</h4>
 				</div>
 				<div class="modal-body modal-body-sub">
@@ -50,7 +50,7 @@
 										<div class="facts">
 											<div class="register">
 												<div class="alert alert-danger fade in" style="display: none" id="signin-primary-alert">
-													<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+													<a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
 												  	<strong>LOGIN FAILED!</strong><p id="alertMsg">Incorrect Data</p>
 												</div>
 												<input name="Email" placeholder="Email Address" type="text" required="" id="signin-email" class="input-sign-in">						

@@ -24,54 +24,62 @@
 <body class="fix-header fix-sidebar">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="card p-30">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-shopping-cart f-s-40 color-primary"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h3>Manage Products</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-30">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-cog f-s-40 color-success"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h3>Account Settings</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-30">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-archive f-s-40 color-warning"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h3>Manage Orders</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card p-30">
-                            <div class="media">
-                                <div class="media-left meida media-middle">
-                                    <span><i class="fa fa-user f-s-40 color-danger"></i></span>
-                                </div>
-                                <div class="media-body media-text-right">
-                                    <h3>Manage Workers</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                	<a href="?content=products">
+	                    <div class="col-md-3">
+	                        <div class="card p-30">
+	                            <div class="media">
+	                                <div class="media-left meida media-middle">
+	                                    <span><i class="fa fa-shopping-cart f-s-40 color-primary"></i></span>
+	                                </div>
+	                                <div class="media-body media-text-right">
+	                                    <h3>Manage Products</h3>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </a>
+                    <a href="?content=account">
+	                    <div class="col-md-3">
+	                        <div class="card p-30">
+	                            <div class="media">
+	                                <div class="media-left meida media-middle">
+	                                    <span><i class="fa fa-cog f-s-40 color-success"></i></span>
+	                                </div>
+	                                <div class="media-body media-text-right">
+	                                    <h3>Account Settings</h3>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </a>
+                    <a href="?content=orders">
+	                    <div class="col-md-3">
+	                        <div class="card p-30">
+	                            <div class="media">
+	                                <div class="media-left meida media-middle">
+	                                    <span><i class="fa fa-archive f-s-40 color-warning"></i></span>
+	                                </div>
+	                                <div class="media-body media-text-right">
+	                                    <h3>Manage Orders</h3>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </a>
+                    <a href="?content=management">
+	                    <div class="col-md-3">
+	                        <div class="card p-30">
+	                            <div class="media">
+	                                <div class="media-left meida media-middle">
+	                                    <span><i class="fa fa-user f-s-40 color-danger"></i></span>
+	                                </div>
+	                                <div class="media-body media-text-right">
+	                                    <h3>Manage Workers</h3>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+                    </a>
                 </div>
 
                 <div class="row bg-white m-l-0 m-r-0 box-shadow ">

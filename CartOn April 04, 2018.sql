@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2018 at 02:29 AM
+-- Generation Time: Apr 04, 2018 at 05:02 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.27
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `logs` (
   `LogIPAddress` varchar(100) NOT NULL,
   `LogHTMLEntities` varchar(500) NOT NULL,
   PRIMARY KEY (`LogID`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 --
 -- RELATIONSHIPS FOR TABLE `logs`:
@@ -69,7 +69,24 @@ INSERT INTO `logs` (`LogID`, `UserID`, `LogOperation`, `LogDate`, `LogDeviceType
 (23, 3, 'Logout', '2018-03-28 01:36:14', 'Computer', 'IP: 112.198.83.239', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
 (24, 4, 'Login', '2018-03-28 01:36:58', 'Computer', 'IP: 112.198.83.239', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
 (25, 4, 'Logout', '2018-03-28 01:38:49', 'Computer', 'IP: 112.198.83.239', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
-(26, 4, 'Login', '2018-03-28 23:32:49', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36');
+(26, 4, 'Login', '2018-03-28 23:32:49', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(27, 4, 'Logout', '2018-03-29 00:31:27', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(28, 4, 'Login', '2018-03-29 00:43:38', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(29, 4, 'Logout', '2018-03-29 00:47:22', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(30, 3, 'Login', '2018-03-29 01:15:35', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(31, 3, 'Login', '2018-03-29 03:41:57', 'Computer', 'IP: 112.198.68.196', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(32, 3, 'Login', '2018-03-29 10:46:03', 'Computer', 'IP: 110.54.195.171', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(33, 3, 'Logout', '2018-03-29 10:49:06', 'Computer', 'IP: 110.54.195.171', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(34, 3, 'Login', '2018-03-29 10:49:54', 'Computer', 'IP: 110.54.195.171', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(35, 3, 'Logout', '2018-03-29 10:50:00', 'Computer', 'IP: 110.54.195.171', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(36, 4, 'Login', '2018-03-29 10:50:19', 'Computer', 'IP: 110.54.195.171', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(37, 4, 'Logout', '2018-03-29 10:50:39', 'Computer', 'IP: 110.54.195.171', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(38, 3, 'Login', '2018-04-01 06:00:55', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(39, 3, 'Logout', '2018-04-01 06:01:46', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(40, 4, 'Login', '2018-04-01 06:29:46', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(41, 4, 'Logout', '2018-04-01 06:29:58', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(42, 3, 'Login', '2018-04-01 06:30:11', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(43, 4, 'Login', '2018-04-04 02:43:31', 'Computer', 'IP: 110.54.176.175', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -167,8 +184,8 @@ CREATE TABLE IF NOT EXISTS `orderdetails` (
 -- Table structure for table `orders`
 --
 -- Creation: Mar 07, 2018 at 11:59 PM
--- Last update: Mar 22, 2018 at 10:21 AM
--- Last check: Mar 28, 2018 at 01:36 AM
+-- Last update: Mar 29, 2018 at 10:50 AM
+-- Last check: Apr 01, 2018 at 06:29 AM
 --
 
 DROP TABLE IF EXISTS `orders`;
@@ -181,7 +198,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `OrderStatus` varchar(100) NOT NULL,
   `OrderReceiveDate` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`OrderID`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 --
 -- RELATIONSHIPS FOR TABLE `orders`:
@@ -221,7 +238,8 @@ INSERT INTO `orders` (`OrderID`, `UserID`, `ProductID`, `OrderAmount`, `OrderDat
 (31, 5, 8, 1, '2018-03-17 09:21:08', 'Cart', NULL),
 (32, 5, 10, 1, '2018-03-17 09:21:13', 'Cart', NULL),
 (33, 5, 6, 1, '2018-03-17 09:22:04', 'Cart', NULL),
-(34, 3, 3, 1, '2018-03-22 04:57:49', 'Cart', NULL);
+(34, 3, 3, 1, '2018-03-22 04:57:49', 'Cart', NULL),
+(35, 4, 3, 1, '2018-03-29 10:50:23', 'Cart', NULL);
 
 -- --------------------------------------------------------
 
@@ -309,6 +327,7 @@ INSERT INTO `productoptions` (`ProductOptionID`, `ProductID`, `OptionID`, `Optio
 --
 -- Creation: Mar 28, 2018 at 11:58 PM
 -- Last update: Mar 29, 2018 at 12:02 AM
+-- Last check: Mar 29, 2018 at 10:45 AM
 --
 
 DROP TABLE IF EXISTS `products`;

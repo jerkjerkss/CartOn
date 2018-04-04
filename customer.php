@@ -54,19 +54,23 @@
 <?php 
 	if ($pager == "products") {
 		___inc_products();
+		getFooterContents();
 	}else if($pager == "about"){
 		___inc_about();
+		getFooterContents();
 	}else if($pager == "checkout"){
 		___inc_checkout();
 	}else if($pager == "mailus"){
 		___inc_mailus();
+		getFooterContents();
 	}else if($pager == "account"){
 		___inc_account();
 	}else {
 		___inc_home();
+		getFooterContents();
 	}
 
-	getFooterContents();
+	
  ?>
 <script type="text/javascript" src="js/cart.js"></script>
 

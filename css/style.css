@@ -62,6 +62,14 @@ input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_in
     letter-spacing: 13px;
     padding-left: .5em;
 }
+#accounts
+{
+    border:1px solid #BEBEBE;
+}
+#sign-out
+{
+    margin-top: 110px;
+}
 .w3l_login a {
     font-size: .8em;
     color: #BEBEBE;
@@ -69,7 +77,14 @@ input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_in
     height: 50px;
     display: block;
     text-align: center;
-    border: 1px solid #BEBEBE;
+
+
+}
+.w3l_login a:hover {
+    color: #00b1a2;
+    transition: .9s;
+
+
 }
 .w3l_login a span{
     top:1.3em;
@@ -3888,6 +3903,19 @@ td.invert-image a img {
     .w3l_login a {
         width: 35px;
         height: 35px;
+    }
+    #out
+    {
+        display: none;
+    }
+
+    #client_name
+    {
+        margin-left: 40px;
+    }
+    .total
+    {
+        margin-left: 40px;
     }
     .w3l_login a span {
         top: 0.7em;

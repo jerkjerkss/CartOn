@@ -134,6 +134,14 @@ function ___inc_account(){
 function ___client_dashboard(){
 	include('inc/client-dashboard.php');
 	inject_asset('stylesheet', 'css/dashboard.css');
+	inject_asset('stylesheet', 'css/font-awesome.min.css');
+	inject_asset('stylesheet', 'css/helper-dashboard.css');
+	inject_asset('stylesheet', 'css/style-dashboard.css');
+	inject_asset('script', 'js/raphael-min.js');
+	inject_asset('script', 'js/morris.js');
+	inject_asset('script', 'js/dashboard1-init.js');
+	inject_asset('script', 'js/scripts.js');
+	
 }
 
 function ___client_products(){

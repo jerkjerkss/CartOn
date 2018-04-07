@@ -1,25 +1,3 @@
-
-<!-- <center>
-	<h1 class="heading">CartOn Dashboard</h1><br>
-    <div class="quick-actions_homepage">
-      <ul class="quick-actions">
-            <button class="custom-btn btn-6"><span>My Products</span></button>
-           <button class="custom-btn btn-6"><span>Settings</span></button>
-            <button class="custom-btn btn-6"><span> Manage Orders</span></button>
-            <button class="custom-btn btn-6"><span>Manage Workers</span></button>
-      </ul>
-    </div>
-</center>
- -->
-  	<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-  	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link href="css/helper-dashboard.css" rel="stylesheet">
-    <link href="css/style-dashboard.css" rel="stylesheet">
-    <script src="js/jquery.min.js"></script>
-     <script src="js/raphael-min.js"></script>
-    <script src="js/morris.js"></script>
-    <script src="js/dashboard1-init.js"></script>
-    <script src="js/scripts.js"></script>
 <div class="container"><br><br>
 <body class="fix-header fix-sidebar">
             <div class="container-fluid">

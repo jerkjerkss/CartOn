@@ -24,22 +24,65 @@
 					</div>
 				</div>
 			<!-- //breadcrumbs -->
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<center><h1>Codes Starts Here: Payment Method</h1></center>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+   
+
+
+</head>
+<body>
+
+<div class="container"><br><br>
+    <div class="row">
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6 center-block">
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-default">
+                    <h3 class="panel-title" style="color: white; margin: 10px;">
+                        <font face="Azo sans light">Pay order with Coins.ph Wallet</font>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                    <div class="form-group">
+                        <label style="margin-left: -15px;">Wallet Address</label>
+                        <div class="input-group">
+                            <input style="margin-left: -15px;" type="text" class="form-control" placeholder="Enter you Wallet Address"
+                                required autofocus />
+                            <span class="input-group-addon"><span class="fa fa-lock" style="margin-left:-20px;" ></span></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="margin-left: -15px;">
+                            <div class="form-group">
+                             <form action="" method="post"><br>
+                                        Upload a screenshot of your payment:<p><br></p>
+                                        <input type="file">
+                             </form>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><span class="badge pull-left"><span class="glyphicon"></span>PHP 100.00</span>&nbsp;&nbsp;Will be deducted to your Peso wallet</span></a>
+                </li>
+            </ul>
+            <br/>
+            
+           <a href="#" class="btn btn-success btn-lg btn-block" style="background-color: #00b1a2">Pay</a>
+        </div>
+    </div>
+</div>	
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+
 
 		<?php
 	}else {

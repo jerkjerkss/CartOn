@@ -22,13 +22,20 @@ function getFooterContentsClient(){
 function getHeaderObjects($userInfoArray){
 
 	?>
+	<style type="text/css">
+		#sign-out
+		{
+			margin-top: 12px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<div class="header" id="header">
 		<div class="container">
 			<div class="w3l_login">
 				<?php 
 					if (basename($_SERVER["SCRIPT_FILENAME"]) == "customer.php" || basename($_SERVER["SCRIPT_FILENAME"]) == "client.php") {
 						?> 
-							<a href="lib/logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"><br>Logout</span></a>
+							<a id="accounts" href="lib/logout.php"><span class="fa fa-sign-out fa-lg" id="sign-out" aria-hidden="true"><br></span><font face="azo sans"><span id="out">Logout</span></font></a>
 						<?php
 					}else {
 						?>
@@ -38,7 +45,7 @@ function getHeaderObjects($userInfoArray){
 				 ?>
 			</div>
 			<div class="w3l_logo">
-				<a href="index"><img style="max-width: 277px;margin: 2px 0 -23px 0;" src="/CartOn/images/texticon.png">
+				<a href="index"><img style="max-width: 250px;margin:  0 -1px 0;" src="/CartOn/images/texticon.png">
 				</a>
 			</div>
 			<div class="search">
@@ -89,10 +96,10 @@ function getCart($userInfoArray){
 	?>
 	<div class="cart box_1">
 		<a href="?content=checkout">
-			<div class="total">Php <span id="cart-price"><?php echo number_format((float)$FINFO->getItems($userInfoArray['UserID'])['Price'], 2, '.', ''); ?></span> (<span id="cart-items"><?php echo $FINFO->getItems($userInfoArray['UserID'])['Items']; ?></span> items)</div>
+			<div class="total" style="margin-top: 10px;">Php <span id="cart-price"><?php echo number_format((float)$FINFO->getItems($userInfoArray['UserID'])['Price'], 2, '.', ''); ?></span> (<span id="cart-items"><?php echo $FINFO->getItems($userInfoArray['UserID'])['Items']; ?></span> items)</div>
 			<img src="images/bag.png" alt="" />
 		</a>
-		<p><a class="simpleCart_empty"><?php echo $userInfoArray['UserFirstName']." ".$userInfoArray['UserLastName']; ?></a></p>
+		<p><a class="simpleCart_empty" id="client_name"><?php echo $userInfoArray['UserFirstName']." ".$userInfoArray['UserLastName']; ?></a></p>
 		<div class="clearfix"> </div>
 	</div>	
 	<?php

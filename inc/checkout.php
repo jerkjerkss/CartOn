@@ -11,6 +11,10 @@
   	if(isset($_REQUEST['PaymentMethod'])) :
     $Pmethod = $_REQUEST['PaymentMethod'];
   	endif;
+
+	$totalAmount = 0;
+	$shippingFee = 100;
+
  ?>
 
 
@@ -130,19 +134,37 @@
 						        </div>
 						        <div class="panel-body">
 						          <p class="pull-left"><strong>Personal Information</strong></p><br>
-						          <p class="pull-left">Full Name: Erwin Hayag </p><br>
-						          <p class="pull-left">Shipping Address: Dasmariñas, Philippines </p><br><br>
+						          <p class="pull-left">Full Name: <?php echo $_SESSION['userInfo']['UserFirstName']." ".$_SESSION['userInfo']['UserLastName']?> </p><br>
+						          <p class="pull-left">Shipping Address: <?php echo $_SESSION['userInfo']['UserAddress'] ?> </p><br>
+						          <p class="pull-left">Alternative Address: <?php echo $_SESSION['userInfo']['UserAddress2'] ?> </p><br><br>
 						          <p class="pull-left"><strong>Order Summary</strong></p><p class="pull-right"></p><br>
-						          <p class="pull-left">Lenovo K8 Note </p>
-						          <p class="pull-right">PHP 4999.00</p><br>
-						          <p class="pull-left">VR Box Shinecon Smartphone 3D VR   </p>
-						          <p class="pull-right">PHP 499.00</p><br>
-						          <p class="pull-left">Apple Macbook Air 13-Inch 128GB, MQD32   </p>
-						          <p class="pull-right">PHP 46999.00</p><br><br>
-						          <p class="pull-left"><strong>TOTAL AMOUNT: <h5 class="pull-right">PHP 9998.00</p></strong></h5><br><br><br>
+						          
+						          <?php 
+						          	$totalAmount = 0;
+						          	foreach ($UserOrders as $key => $value) {
+						          		$totalAmount += $value['ProductPrice']
+						          		?>
+						          			<p class="pull-left"><?php echo $value['ProductName'] ?></p>
+						          			<p class="pull-right">PHP <?php echo number_format((float)$value['ProductPrice'], 2, '.', '') ?></p><br>
+						          		<?php
+						          	}
+						           ?>
+						           <br>
+						          <p class="pull-left"><strong>SUB TOTAL: <h5 class="pull-right">PHP <?php echo number_format((float)$totalAmount, 2, '.', '') ?></p></strong></h5><br>
+						          <p class="pull-left">Shipping Fee: </p>
+						          			<?php 
+						          				if ($totalAmount >= 1000) {
+						          					?><p class="pull-right" style="text-decoration: line-through;">Php <?php echo number_format((float)$shippingFee, 2, '.', '') ?></p><br><br><?php
+						          				}else {
+						          					?><p class="pull-right">Php <?php echo number_format((float)$shippingFee, 2, '.', '') ?></p><br><br><?php
+						          				}
+						          			 ?>
+						          			
+
+				          			<p class="pull-left"><strong>Amount to Pay: <h5 class="pull-right">PHP <?php echo ($totalAmount >= 1000 ? number_format((float)$totalAmount, 2, '.', ''): number_format((float)$totalAmount + $shippingFee, 2, '.', '')) ?></p></strong></h5><br><br><br>
 						        </div>
 						        <div class="panel-footer">
-						          <font face="azo sans"><button class="btn btn-md" style="margin-left: 15px; padding: 5px 80px;">Buy More!</button></font>
+						          <font face="azo sans"><a href="?content=products"><button class="btn btn-md" style="margin-left: 15px; padding: 5px 80px;">Buy More!</button></a></font>
 						        </div>
 						      </div> 
 						    </div> 
@@ -288,7 +310,6 @@
 					</thead>
 
 					<?php 
-						$totalAmount = 0;
 						foreach ($UserOrders as $key => $value) {
 							if (isset($UserOrders[0]['OrderID'])) {
 							$totalAmount += $value['OrderAmount'] * $value['ProductPrice'];

@@ -110,16 +110,131 @@
 								</div>
 							</div>
 						<!-- //breadcrumbs -->
-						<center>
-							<br>
-							<br>
-							<br>
-							<a href="?content=checkout&step=PaymentMethod&PaymentMethod=CoinsPH">Coins.PH</a>
-							<br>
-							<br>
-							<br>
-							<a href="?content=checkout&step=PaymentMethod&PaymentMethod=COD">Cash on Delivery</a>
-						</center>
+							<!-- <center>
+								<br>
+								<br>
+								<br>
+								<a href="?content=checkout&step=PaymentMethod&PaymentMethod=CoinsPH">Coins.PH</a>
+								<br>
+								<br>
+								<br>
+								<a href="?content=checkout&step=PaymentMethod&PaymentMethod=COD">Cash on Delivery</a>
+							</center> -->
+
+						<div class="container"><br><br>
+						  <div class="row">
+						    <div class="col-md-6 col-sm-6">
+						      <div class="panel panel-default">
+						        <div class="panel-heading">
+						          <h3>Order Information</h3>
+						        </div>
+						        <div class="panel-body">
+						          <p class="pull-left"><strong>Personal Information</strong></p><br>
+						          <p class="pull-left">Full Name: Erwin Hayag </p><br>
+						          <p class="pull-left">Shipping Address: Dasmariñas, Philippines </p><br><br>
+						          <p class="pull-left"><strong>Order Summary</strong></p><p class="pull-right"></p><br>
+						          <p class="pull-left">Lenovo K8 Note </p>
+						          <p class="pull-right">PHP 4999.00</p><br>
+						          <p class="pull-left">VR Box Shinecon Smartphone 3D VR   </p>
+						          <p class="pull-right">PHP 499.00</p><br>
+						          <p class="pull-left">Apple Macbook Air 13-Inch 128GB, MQD32   </p>
+						          <p class="pull-right">PHP 46999.00</p><br><br>
+						          <p class="pull-left"><strong>TOTAL AMOUNT: <h5 class="pull-right">PHP 9998.00</p></strong></h5><br><br><br>
+						        </div>
+						        <div class="panel-footer">
+						          <font face="azo sans"><button class="btn btn-md" style="margin-left: 15px; padding: 5px 80px;">Buy More!</button></font>
+						        </div>
+						      </div> 
+						    </div> 
+								<div class="col-md-6 col-sm-6">
+									
+									  <div class="col-md-6">
+								      <div class="panel panel-default text-center" id="payment">
+								        <div class="panel-heading">
+								          <h3>Coins.PH</h3>
+								        </div>
+								        <div class="panel-body">
+								          <p class="text-center" style="margin-left: -20px;">We accept payment through your coins.ph account!</p><br>
+								          <img src="images/coinsph.png" id="coinsph">	
+								        </div>
+								        <div class="panel-footer">
+								         
+								          <a href="?content=checkout&step=PaymentMethod&PaymentMethod=CoinsPH"><button class="btn btn-lg"><p>Place Order Now!</p></button></a>
+								        </div>
+								      </div> 
+								    </div> 
+								    <div class="col-md-6 col-sm-12">
+								      <div class="panel panel-default text-center" >
+								        <div class="panel-heading">
+								          <h3>Cash On Delivery</h3>
+								        </div>
+								        <div class="panel-body">
+								          <p class="text-center" style="margin-left: -20px;">We accept payment through your coins.ph account!</p><br>
+								          <img src="images/cod.png" id="coinsph">	
+								        </div>
+								        <div class="panel-footer">
+								          
+								          <a href="?content=checkout&step=PaymentMethod&PaymentMethod=COD"><button class="btn btn-lg"><p>Place order now!</p></button></a>
+								        </div>
+								      </div> 
+								    </div> 
+								    </div>
+								    <div class="text-center"><br>
+									    <p>Choose a payment plan that works for you and we offer Cash on Delivery.Full payment is directly to the courier. No partial down is required.</p>
+									  </div>
+								    </div>
+						  </div>
+						</div>
+						<style type="text/css">
+						.btn-lg{
+							padding: 3px 20px;
+						}
+						#payment{
+							background-color: 
+						}
+						.pull-right {
+							margin-right: 40px;
+						}
+						#coinsph{
+							width: 196px;
+							height: 110px;
+							margin-left: -32px;
+						}
+							.panel {
+							    border: 1px solid #029f92; 
+							    border-radius:0;
+							    transition: box-shadow 0.5s;
+							}
+							.panel:hover {
+							    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+							}
+							.panel-footer .btn:hover {
+							    border: 1px solid #f4511e;
+							    background-color: #fff;
+							    color: #f4511e;
+							}
+							.panel-heading {
+							    color: #fff !important;
+							    background-color: #029f92 !important;
+							    padding: 25px;
+							    border-bottom: 1px solid transparent;
+							}
+							.panel-footer {
+							    background-color: #fff;
+							}
+							.panel-footer h3 {
+							    font-size: 32px;
+							}
+							.panel-footer h4 {
+							    color: #aaa;
+							    font-size: 14px;
+							}
+							.panel-footer .btn {
+							    margin: 15px 0;
+							    background-color: #f4511e;
+							    color: #fff;
+							}
+						</style>
 					<?php
 				}
 			?>

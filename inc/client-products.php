@@ -32,13 +32,14 @@
 
 else { ?>
 	<h1 class="heading">PRODUCTS</h1>
-	<a href="?content=products&view=additem"><button class="addbtn"><i class="fas fa-plus-circle"></i> Add Item </button></a>
+	<a href="?content=products&view=additem"><button class="addbtn"><i class="fa fa-plus-circle"></i> Add Item </button></a>
 	<br>
 	<br>
 
 		<div class="btn-option">
-			<a href="?content=products&view=grid"><button class="btnop"><i class="fas fa-th-large"></i> GRID </button></a>
-			<a href="?content=products&view=list"><button class="btnop"><i class="fas fa-list"></i> LIST </button></a>
+			<a href="?content=products&view=grid"><button class="btnop">
+			<i class="fa fa-th-large"></i> GRID </button></a>
+			<a href="?content=products&view=list"><button class="btnop"><i class="fa fa-list"></i> LIST </button></a>
 		</div> 
 
 	<br>
@@ -80,9 +81,9 @@ else { ?>
 				    <p class='itmname' align='center'><?php echo $value['ProductName'] ?></p>
 				    <strong align='center'>PHP <?php echo $value['ProductPrice'] ?></strong><br>
 				    <button class='btn edtbtn' id="grid-edit-<?php echo $value['ProductID'] ?>">
-				    <i class="fas fa-edit"></i></span>&nbsp Edit</button>
+				    <i class="fa fa-edit"></i></span>&nbsp Edit</button>
 				    <button class='btn dltbtn' id="grid-delete-<?php echo $value['ProductID'] ?>">
-				    <i class="far fa-trash-alt"></i></span>&nbspDelete</button>
+				    <i class="fa fa-trash"></i></span>&nbsp Delete</button>
 				    	<br>&nbsp
 				</li>
   			<?php

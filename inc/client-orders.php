@@ -13,6 +13,13 @@
 		<a href="?content=orders&manage=list"><img class="img_pr" src="images/pr5.png"></a>
 	</div>
 
+	<div class="btn-group">
+	  <a href="?content=products&view=grid"><button class="btnop">
+			<i class="fa fa-th-large"></i></button></a></button>
+	  <a href="?content=products&view=list"><button class="btnop">
+			<i class="fa fa-list"></i></button></a></button>
+	</div>
+
 <?php if ($manage == "pending") { ?>
 	<table>
 		  <tr class="trsize">
@@ -230,4 +237,6 @@
 		  </tr>
 		</table>
 <?php } ?>
+
+
 </center>

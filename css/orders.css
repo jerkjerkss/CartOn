@@ -76,6 +76,7 @@ table {
     width: 961px;
     height: 120px;
     margin-bottom: 10%;
+    margin-top: 1%;
  }
 
 th, td {
@@ -92,4 +93,28 @@ th {
     background-color: #188279;
     color: white;
     font-weight: bold;
+}
+
+.btn-group button {
+    background-color: #dcdcdc;
+    border: 1px solid #083036;
+    color: #083036; 
+    padding: 3px 11px; 
+    cursor: pointer; 
+    float: left; 
+    font-size: 20px;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group button:hover {
+    background-color: #80dbdc;
 }

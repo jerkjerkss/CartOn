@@ -28,7 +28,7 @@
 			  <br>
 			  <input type="text" id="pprice"  placeholder="Product Price">
 			  <br>
-			  <button class="addbtn"><i class="fas fa-plus-circle"></i> Add Product </button>
+			  <button class="addbtn"><i class="fa fa-plus-circle"></i> Add Product </button>
 		</form>
 
 	<!-- ADD ITEM CONTENTS -->
@@ -44,6 +44,33 @@
 					</ul>
 				</div>
 			</div>
+			<h1 class="heading">Edit PRODUCT</h1>
+		<form>
+			<img class="product_img" src="uploads/products/Capture.PNG"><br>
+			<button class="change_photo"> Upload Photo </button><br>
+
+				<div class="dropdown">
+				  <button class="dropbtn">Change Category</button>
+					  <div class="dropdown-content">
+						<a href="">Apparel</a>
+						<a href="">Footwear</a>
+						<a href="">Electronics</a>
+						<a href="">Accessories</a>
+						<a href="">Footwear</a>
+					  </div>
+			 	</div><br>
+			  <input type="text" id="pname"  placeholder="Product Name">
+			  <br>
+			  <textarea id="pdes" placeholder="Product Long Description.." style="height:100px; width: 50%"></textarea> <br>
+			  <textarea id="pdes" placeholder="Product Short Description.." style="height:65px; width: 25%"></textarea>
+			  <textarea id="pdes" placeholder="Product Cart Description.." style="height:65px; width: 25%"></textarea> <br>
+			  <input type="text" id="pprice"  placeholder="Product Price"><br>
+			  <input type="text" id="pweight"  placeholder="Product Weight"><br>
+			  <input type="text" id="ploc"  placeholder="Product Location"><br>
+			  <input type="text" id="pstock"  placeholder="Product Stock"><br>
+
+			  <button class="addbtn"><i class="fa fa-check"></i> SAVE EDIT </button>
+		</form>
 		<!-- //breadcrumbs -->
 	<?php
 }else { ?>
@@ -52,12 +79,13 @@
 	<br>
 	<br>
 
-		<div class="btn-option">
-			<a href="?content=products&view=grid"><button class="btnop">
-			<i class="fa fa-th-large"></i> GRID </button></a>
-			<a href="?content=products&view=list"><button class="btnop"><i class="fa fa-list"></i> LIST </button></a>
-		</div> 
-
+	<div class="btn-group">
+	  <a href="?content=products&view=grid"><button class="btnop">
+			<i class="fa fa-th-large"></i></button></a></button>
+	  <a href="?content=products&view=list"><button class="btnop">
+			<i class="fa fa-list"></i></button></a></button>
+	</div>
+		
 	<br>
 
 <?php if ($view == "list"){ ?>
@@ -85,13 +113,14 @@
 		  		}
 		   ?>
 		</table>
+
 <?php }else if ($view == "edit") {
 	?>
-		<center><h1>Test</h1></center>
-		<!-- cedrick -->
+		<center>
+			<h1>Test</h1>
+		</center>
+
 	<?php
-
-
 }else { ?>
 <div class="col-md-12 col-sm-12" style="padding-bottom: 113px;padding-right: 0px;padding-left: 50px;">  
 	<div class="row">

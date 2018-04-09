@@ -1,27 +1,39 @@
+body  
+{
+  font-family: century Gothic;
+}
 .heading
   {
     padding-top: 2%;
     padding-bottom: 1%;
     font-size: 4em;
   }
-.btn-option .btnop{
-    background-color: #d2d2d2;
-    border: none;
-    color: black;
-    padding: 4px 13px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.5s;
 
+    .btn-group button {
+    background-color: #dcdcdc;
+    border: 1px solid #083036;
+    color: #083036; 
+    padding: 3px 11px; 
+    cursor: pointer; 
+    float: left; 
+    font-size: 20px;
 }
-.btn-option .btnop:hover {
-    background-color: #3e8e41;
-    transition: 0.5s;
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
 }
-.btn-option .btnop:active {
-    background-color: #00b2a3;
+
+.btn-group button:not(:last-child) {
+    border-right: none;
 }
+
+.btn-group button:hover {
+    background-color: #80dbdc;
+}
+
+
 
 /*<------------------------- A D D   I T E M ---------------------------->*/
 
@@ -29,14 +41,14 @@
   {
     border: none;
     border-radius: 50px;
-    background-color: #18822e;
+    background-color: #299e42;
     font-size: 1.3em;
     font-family: azo sans;
     font-weight: bold;
     color: white;
-    padding: 10px;
+    padding: 6px;
     transition: 0.5s;
-    width: 200px;
+    width: 158px;
     margin-top: 15px;
   }
 .addbtn:hover
@@ -80,7 +92,67 @@
   {
       border: 3px solid #00b2a3;
   }
+/*<------------------------- EDIT PRODUCT ---------------------------->*/
+img.product_img
+  {
+    width: 200px;
+  }
+.change_photo
+  {
+    border: none;
+    border-radius: 50px;
+    background-color: #078277;
+    font-size: 1.3em;
+    font-family: azo sans;
+    font-weight: bold;
+    color: white;
+    padding: 4px;
+    width: 200px;
+    margin-bottom: 10px;
 
+  }
+.dropbtn {
+    background-color: #078277;
+    color: white;
+    padding: 4px;
+    width: 200px;
+    font-size: 20px; font-family: century gothic;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #d8d8d8;transition: 0.3s;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0b4e48;
+    transition: 0.3s;
+}
 /*<------------------------- L I S T ---------------------------->*/
 
 .thumb
@@ -124,6 +196,7 @@ table {
     width: 800px;
     height: 200px;
     margin-bottom: 10%;
+    margin-top: 1%;
   }
 
 th, td {
@@ -145,10 +218,6 @@ th {
 
 /*<------------------------- G R I D ---------------------------->*/
 
-.rowalign
-  {
-    padding-left: 100px;
-  }
 ul.producthandler
 {
   height: 80%;

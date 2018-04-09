@@ -238,6 +238,7 @@
 		</table>
 <?php } ?>
 
+<<<<<<< HEAD
 <div class="col-md-12 col-sm-12" style="padding-bottom: 113px;padding-right: 0px;padding-left: 50px;">  
 	<div class="row">
 	        <ul class="producthandler"> 
@@ -288,4 +289,7 @@
   			</ul>
 		  </div>
 	</div>
+=======
+
+>>>>>>> cbf1dcaffb0dddb966f4c5bfa71f9010c983feb5
 </center>

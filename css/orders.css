@@ -118,6 +118,7 @@ th {
 .btn-group button:hover {
     background-color: #80dbdc;
 }
+<<<<<<< HEAD
 
  /*<------------------------- G R I D ---------------------------->*/
 .pstate
@@ -196,3 +197,5 @@ p.itmname
     background-color: #ec3a2d;
     color: white;
   }
+=======
+>>>>>>> cbf1dcaffb0dddb966f4c5bfa71f9010c983feb5

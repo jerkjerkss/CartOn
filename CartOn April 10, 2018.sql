@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2018 at 05:02 AM
+-- Generation Time: Apr 09, 2018 at 05:59 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.0.27
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `logs` (
   `LogIPAddress` varchar(100) NOT NULL,
   `LogHTMLEntities` varchar(500) NOT NULL,
   PRIMARY KEY (`LogID`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
 
 --
 -- RELATIONSHIPS FOR TABLE `logs`:
@@ -86,7 +86,41 @@ INSERT INTO `logs` (`LogID`, `UserID`, `LogOperation`, `LogDate`, `LogDeviceType
 (40, 4, 'Login', '2018-04-01 06:29:46', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
 (41, 4, 'Logout', '2018-04-01 06:29:58', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
 (42, 3, 'Login', '2018-04-01 06:30:11', 'Computer', 'IP: 110.54.146.186', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
-(43, 4, 'Login', '2018-04-04 02:43:31', 'Computer', 'IP: 110.54.176.175', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36');
+(43, 4, 'Login', '2018-04-04 02:43:31', 'Computer', 'IP: 110.54.176.175', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(44, 4, 'Login', '2018-04-07 03:00:48', 'Computer', 'IP: ', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(45, 4, 'Login', '2018-04-07 10:01:40', 'Computer', 'IP: 112.198.69.75', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(46, 4, 'Logout', '2018-04-07 11:10:23', 'Computer', 'IP: 112.198.69.75', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(47, 3, 'Login', '2018-04-07 11:10:36', 'Computer', 'IP: 112.198.69.75', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(48, 4, 'Login', '2018-04-07 11:25:45', 'Computer', 'IP: 112.198.69.75', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(49, 4, 'Logout', '2018-04-07 11:26:59', 'Computer', 'IP: 112.198.69.75', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(50, 4, 'Login', '2018-04-07 11:30:11', 'Computer', 'IP: 112.198.69.75', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(51, 4, 'Login', '2018-04-08 04:53:55', 'Computer', 'IP: 110.54.208.43', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(52, 4, 'Logout', '2018-04-08 05:13:33', 'Computer', 'IP: 110.54.208.43', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(53, 4, 'Login', '2018-04-08 05:13:48', 'Computer', 'IP: 110.54.208.43', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(54, 4, 'Logout', '2018-04-08 05:14:34', 'Computer', 'IP: 110.54.208.43', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(55, 4, 'Login', '2018-04-08 05:14:46', 'Computer', 'IP: 110.54.208.43', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(56, 3, 'Login', '2018-04-09 01:53:10', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(57, 3, 'Logout', '2018-04-09 04:00:28', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(58, 4, 'Login', '2018-04-09 04:00:51', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(59, 4, 'Logout', '2018-04-09 04:00:56', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(60, 3, 'Login', '2018-04-09 05:06:07', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(61, 4, 'Login', '2018-04-09 08:04:25', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(62, 4, 'Logout', '2018-04-09 08:31:48', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(63, 4, 'Login', '2018-04-09 08:32:30', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(64, 4, 'Logout', '2018-04-09 08:33:47', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(65, 4, 'Login', '2018-04-09 08:35:06', 'Computer', 'IP: 110.54.129.209', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(66, 4, 'Logout', '2018-04-09 09:47:08', 'Computer', 'IP: 112.198.82.80', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(67, 4, 'Login', '2018-04-09 09:47:16', 'Computer', 'IP: 112.198.82.80', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(68, 4, 'Logout', '2018-04-09 10:07:31', 'Computer', 'IP: 112.198.82.80', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(69, 4, 'Login', '2018-04-09 11:35:01', 'Computer', 'IP: 110.54.186.175', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(70, 4, 'Logout', '2018-04-09 13:33:04', 'Computer', 'IP: 110.54.227.149', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(71, 3, 'Login', '2018-04-09 13:33:40', 'Computer', 'IP: 110.54.227.149', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(72, 3, 'Logout', '2018-04-09 13:50:03', 'Computer', 'IP: 110.54.186.175', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(73, 4, 'Login', '2018-04-09 13:50:18', 'Computer', 'IP: 110.54.186.175', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(74, 4, 'Logout', '2018-04-09 14:07:40', 'Computer', 'IP: 110.54.224.125', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(75, 3, 'Login', '2018-04-09 14:07:48', 'Computer', 'IP: 110.54.224.125', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(76, 3, 'Logout', '2018-04-09 14:45:40', 'Computer', 'IP: 110.54.224.125', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'),
+(77, 4, 'Login', '2018-04-09 14:45:50', 'Computer', 'IP: 110.54.224.125', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -183,9 +217,8 @@ CREATE TABLE IF NOT EXISTS `orderdetails` (
 --
 -- Table structure for table `orders`
 --
--- Creation: Mar 07, 2018 at 11:59 PM
--- Last update: Mar 29, 2018 at 10:50 AM
--- Last check: Apr 01, 2018 at 06:29 AM
+-- Creation: Apr 09, 2018 at 03:24 PM
+-- Last update: Apr 09, 2018 at 03:53 PM
 --
 
 DROP TABLE IF EXISTS `orders`;
@@ -197,8 +230,10 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `OrderDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `OrderStatus` varchar(100) NOT NULL,
   `OrderReceiveDate` timestamp NULL DEFAULT NULL,
+  `OrderPaymentMethod` varchar(50) DEFAULT NULL,
+  `isPaid` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`OrderID`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- RELATIONSHIPS FOR TABLE `orders`:
@@ -212,34 +247,37 @@ CREATE TABLE IF NOT EXISTS `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`OrderID`, `UserID`, `ProductID`, `OrderAmount`, `OrderDate`, `OrderStatus`, `OrderReceiveDate`) VALUES
-(9, 3, 3, 0, '2018-03-08 04:40:28', 'Remove', NULL),
-(8, 3, 8, 0, '2018-03-08 05:50:13', 'Remove', NULL),
-(12, 3, 11, 0, '2018-03-08 05:21:44', 'Remove', NULL),
-(16, 3, 0, 0, '2018-03-08 05:21:21', 'Remove', NULL),
-(11, 3, 5, 0, '2018-03-08 04:51:07', 'Remove', NULL),
-(10, 3, 4, 0, '2018-03-08 04:51:06', 'Remove', NULL),
-(14, 3, 3, 0, '2018-03-08 04:51:05', 'Remove', NULL),
-(15, 3, 6, 0, '2018-03-08 04:51:09', 'Remove', NULL),
-(17, 3, 6, 0, '2018-03-08 05:50:40', 'Remove', NULL),
-(18, 3, 13, 0, '2018-03-08 08:18:22', 'Remove', NULL),
-(19, 3, 3, 0, '2018-03-08 08:32:16', 'Remove', NULL),
-(20, 3, 4, 0, '2018-03-08 08:36:39', 'Remove', NULL),
-(21, 4, 4, 0, '2018-03-08 08:48:10', 'Remove', NULL),
-(22, 4, 11, 0, '2018-03-08 08:48:12', 'Remove', NULL),
-(23, 4, 3, 0, '2018-03-08 08:48:14', 'Remove', NULL),
-(24, 4, 8, 0, '2018-03-08 08:48:19', 'Remove', NULL),
-(25, 4, 14, 0, '2018-03-08 08:48:17', 'Remove', NULL),
-(26, 4, 3, 0, '2018-03-08 08:50:41', 'Remove', NULL),
-(27, 4, 4, 0, '2018-03-08 08:48:37', 'Remove', NULL),
-(28, 4, 4, 0, '2018-03-08 09:07:04', 'Remove', NULL),
-(29, 4, 3, 0, '2018-03-08 09:07:02', 'Remove', NULL),
-(30, 5, 3, 1, '2018-03-17 09:21:02', 'Cart', NULL),
-(31, 5, 8, 1, '2018-03-17 09:21:08', 'Cart', NULL),
-(32, 5, 10, 1, '2018-03-17 09:21:13', 'Cart', NULL),
-(33, 5, 6, 1, '2018-03-17 09:22:04', 'Cart', NULL),
-(34, 3, 3, 1, '2018-03-22 04:57:49', 'Cart', NULL),
-(35, 4, 3, 1, '2018-03-29 10:50:23', 'Cart', NULL);
+INSERT INTO `orders` (`OrderID`, `UserID`, `ProductID`, `OrderAmount`, `OrderDate`, `OrderStatus`, `OrderReceiveDate`, `OrderPaymentMethod`, `isPaid`) VALUES
+(9, 3, 3, 0, '2018-03-08 04:40:28', 'Remove', NULL, NULL, 0),
+(8, 3, 8, 0, '2018-03-08 05:50:13', 'Remove', NULL, NULL, 0),
+(12, 3, 11, 0, '2018-03-08 05:21:44', 'Remove', NULL, NULL, 0),
+(16, 3, 0, 0, '2018-03-08 05:21:21', 'Remove', NULL, NULL, 0),
+(11, 3, 5, 0, '2018-03-08 04:51:07', 'Remove', NULL, NULL, 0),
+(10, 3, 4, 0, '2018-03-08 04:51:06', 'Remove', NULL, NULL, 0),
+(14, 3, 3, 0, '2018-03-08 04:51:05', 'Remove', NULL, NULL, 0),
+(15, 3, 6, 0, '2018-03-08 04:51:09', 'Remove', NULL, NULL, 0),
+(17, 3, 6, 0, '2018-03-08 05:50:40', 'Remove', NULL, NULL, 0),
+(18, 3, 13, 0, '2018-03-08 08:18:22', 'Remove', NULL, NULL, 0),
+(19, 3, 3, 0, '2018-03-08 08:32:16', 'Remove', NULL, NULL, 0),
+(20, 3, 4, 0, '2018-03-08 08:36:39', 'Remove', NULL, NULL, 0),
+(21, 4, 4, 0, '2018-03-08 08:48:10', 'Remove', NULL, NULL, 0),
+(22, 4, 11, 0, '2018-03-08 08:48:12', 'Remove', NULL, NULL, 0),
+(23, 4, 3, 0, '2018-03-08 08:48:14', 'Remove', NULL, NULL, 0),
+(24, 4, 8, 0, '2018-03-08 08:48:19', 'Remove', NULL, NULL, 0),
+(25, 4, 14, 0, '2018-03-08 08:48:17', 'Remove', NULL, NULL, 0),
+(26, 4, 3, 0, '2018-03-08 08:50:41', 'Remove', NULL, NULL, 0),
+(27, 4, 4, 0, '2018-03-08 08:48:37', 'Remove', NULL, NULL, 0),
+(28, 4, 4, 0, '2018-03-08 09:07:04', 'Remove', NULL, NULL, 0),
+(29, 4, 3, 0, '2018-03-08 09:07:02', 'Remove', NULL, NULL, 0),
+(30, 5, 3, 1, '2018-03-17 09:21:02', 'Cart', NULL, NULL, 0),
+(31, 5, 8, 1, '2018-03-17 09:21:08', 'Cart', NULL, NULL, 0),
+(32, 5, 10, 1, '2018-03-17 09:21:13', 'Cart', NULL, NULL, 0),
+(33, 5, 6, 1, '2018-03-17 09:22:04', 'Cart', NULL, NULL, 0),
+(34, 3, 3, 1, '2018-03-22 04:57:49', 'Cart', NULL, NULL, 0),
+(35, 4, 3, 0, '2018-04-08 05:45:58', 'Remove', NULL, NULL, 0),
+(36, 4, 5, 5, '2018-04-09 15:37:21', 'Pending', NULL, 'Cash On Delivery', 0),
+(37, 4, 6, 0, '2018-04-09 08:31:19', 'Remove', NULL, NULL, 0),
+(38, 4, 8, 1, '2018-04-09 15:53:18', 'Pending', NULL, 'Cash On Delivery', 0);
 
 -- --------------------------------------------------------
 
@@ -499,8 +537,8 @@ INSERT INTO `sellergroups` (`SellerGroupID`, `SellerGroupName`, `BIRVerified`, `
 -- Table structure for table `users`
 --
 -- Creation: Feb 28, 2018 at 03:07 AM
--- Last update: Mar 22, 2018 at 10:21 AM
--- Last check: Mar 28, 2018 at 01:23 AM
+-- Last update: Apr 09, 2018 at 11:35 AM
+-- Last check: Apr 09, 2018 at 12:28 AM
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -536,9 +574,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`UserID`, `UserEmail`, `UserPassword`, `UserToken`, `UserAccess`, `UserFirstName`, `UserLastName`, `UserCity`, `UserState`, `UserZip`, `UserEmailVerified`, `UserRegistrationDate`, `UserVerificationCode`, `UserIP`, `UserPhone`, `UserFax`, `UserCountry`, `UserAddress`, `UserAddress2`) VALUES
-(5, 'ardieharold@gmail.com', 'JElIdsZqZR8bPaLLxE3d66xmwS6r2PWHzkm_fBX885w', '', 'customer', 'Ardie Harold', 'Hayag', NULL, NULL, NULL, 0, '2018-03-17 09:18:24', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'winner85@gmail.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'customer', 'Erwin', 'Hayag', NULL, NULL, NULL, 0, '2018-03-08 08:40:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'cart@on.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'client', 'Cart', 'Online', NULL, NULL, NULL, 0, '2018-03-03 10:07:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(5, 'ardieharold@gmail.com', 'JElIdsZqZR8bPaLLxE3d66xmwS6r2PWHzkm_fBX885w', '', 'customer', 'Ardie Harold', 'Hayag', NULL, NULL, NULL, 0, '2018-03-17 09:18:24', NULL, NULL, NULL, NULL, NULL, 'Amuntay 2, Zone 3, Dasmarinas, Cavite', 'CvSU, Biga I, Silang, Cavite'),
+(4, 'winner85@gmail.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'customer', 'Erwin', 'Hayag', 'Philippines', 'Philippines', NULL, 0, '2018-03-08 08:40:11', NULL, NULL, '9955080472', NULL, 'Philippines', 'Amuntay 2, Zone 3, Dasmarinas, Cavite', 'CvSU, Biga I, Silang, Cavite'),
+(3, 'cart@on.com', '_u9OBbEwNENjIY3VNyU71jf3wFsc9xnPzccf6TJrHxk', '', 'client', 'Cart', 'Online', NULL, NULL, NULL, 0, '2018-03-03 10:07:11', NULL, NULL, NULL, NULL, NULL, 'Amuntay 2, Zone 3, Dasmarinas, Cavite', 'CvSU, Biga I, Silang, Cavite');
 
 
 --

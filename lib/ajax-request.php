@@ -14,6 +14,8 @@
 		removecart($data['OrderID']);
 	}else if ($data['request_type'] == "request-updateinfo") {
 		updateInfo($data['target'], $data['value']);
+	}else if ($data['request_type'] == "request-order") {
+		customerOrder($data['PaymentMethod']);
 	}
 
 	function signup($fname, $lname, $email, $password){
@@ -139,7 +141,20 @@
 
 		$updateInfo = $CARTON::update('users', array($target => $value),"`UserID` = '$UserID'");
 
-		echo "SUCESSSsss";
+	}
+
+	function customerOrder($paymentType){
+		session_start();
+		$CARTON = "CARTON";
+		$CART = new $CARTON;
+		$UserID = $_SESSION['userInfo']['UserID'];
+
+		if ($paymentType == "COD") {
+			$setOrder = $CARTON::update('orders', array("OrderStatus" => "Pending", "OrderPaymentMethod" => 'Cash On Delivery'),"`UserID` = '$UserID' AND `OrderStatus` = 'Cart'");
+		}else if ($paymentType == "COINS.PH") {
+			$setOrder = $CARTON::update('orders', array("OrderStatus" => "Pending", "OrderPaymentMethod" => 'COINS.PH'),"`UserID` = '$UserID' AND `OrderStatus` = 'Cart'");
+		}
+
 	}
 
 

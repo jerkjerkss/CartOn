@@ -15,6 +15,7 @@
 	$totalAmount = 0;
 	$shippingFee = 100;
 
+
  ?>
 
 
@@ -157,7 +158,7 @@
 
 						</style>
 						<div class="container">
-						  
+
 						  <div class="row"><br><br>
 						  	<div class="col-md-4"></div>
 						    <div class="col-md-4 col-sm-12">
@@ -168,23 +169,34 @@
 						        <div class="panel-body"><br>
 
 						      	  <p><strong class="pull-left">Receiver :</strong></p>
-						      	  <p class=" pull-left">&nbsp;Erwin Hayag</p><br>
-						          <p class="pull-left"><strong>Shipping Address :</strong> Cavite, Philippines</p><br>
-						          <p class="pull-left"><strong>Track Number :</strong> 23FJ6-3RH</p><br>
-						          <p class="pull-left"><strong>Order ID :</strong> 0985-9784</p><br><br>
-						          
+						      	  <p class=" pull-left">&nbsp;<?php echo $_SESSION['userInfo']['UserFirstName']." ".$_SESSION['userInfo']['UserLastName'] ?></p><br>
+						          <p class="pull-left"><strong>Delivery Address :</strong><br></p><p class="pull-left"><?php echo $_SESSION['userInfo']['UserAddress'] ?></p><br><br><br>
+						          <?php 
+								  		if ($UserOrders[0] != "") {
+								  			foreach ($UserOrders as $key => $value) {
+								          		$totalAmount += $value['ProductPrice'] * $value['OrderAmount'];
+								          	}
+								   ?>
+						          <p><strong class="pull-left">Order Price :</strong></p>
+						          <p class="pull-right fee">PHP <?php echo number_format((float)$totalAmount, 2, '.', '') ?></p><br>
 						          <p><strong class="pull-left">Shipping Fee :</strong></p>
-						          <p class="pull-right fee">PHP 100.00</p><br>
-						          <p><strong class="pull-left">VAT :</strong></p>
-						          <p class="pull-right fee">PHP 50.00</p><br>
+						          <?php 
+				          				if ($totalAmount >= 1000) {
+				          					?><p class="pull-right fee" style="text-decoration: line-through;">Php <?php echo number_format((float)$shippingFee, 2, '.', '') ?></p><br><?php
+				          				}else {
+				          					?><p class="pull-right fee">Php <?php echo number_format((float)$shippingFee, 2, '.', '') ?></p><br><br><?php
+				          				}
+			          			 	?>
+			          			 	<br>
 						          <p><strong class="pull-left">TOTAL :</strong></p>
-						          <p class="pull-right fee">PHP 150.00</p><br><br>
 
-						          
+						          <p class="pull-right fee">PHP <?php echo ($totalAmount >= 1000 ? number_format((float)$totalAmount, 2, '.', '') : number_format((float)$totalAmount+$shippingFee, 2, '.', '')) ?></p><br><br>
+
 						        </div>
 						        <div class="panel-footer">
 						          
-						          <button class="btn btn-md">Proceed</button>
+						          <button class="btn btn-md" id="cod-proceed">Proceed</button>
+						          <?php } ?>
 						        </div>
 						      </div> 
 						    </div> 
@@ -220,17 +232,18 @@
 						          <p class="pull-left">Full Name: <?php echo $_SESSION['userInfo']['UserFirstName']." ".$_SESSION['userInfo']['UserLastName']?> </p><br>
 						          <p class="pull-left">Shipping Address: <?php echo $_SESSION['userInfo']['UserAddress'] ?> </p><br>
 						          <p class="pull-left">Alternative Address: <?php echo $_SESSION['userInfo']['UserAddress2'] ?> </p><br><br>
+						          <?php if ($UserOrders[0] != "") { ?>
 						          <p class="pull-left"><strong>Order Summary</strong></p><p class="pull-right"></p><br>
-						          
 						          <?php 
 						          	$totalAmount = 0;
-						          	foreach ($UserOrders as $key => $value) {
-						          		$totalAmount += $value['ProductPrice']*$value['OrderAmount'];
-						          		?>
-						          			<p class="pull-left"><?php echo $value['OrderAmount'].' ('.$value['ProductName'].')' ?></p>
-						          			<p class="pull-right">PHP <?php echo number_format((float)$value['ProductPrice'], 2, '.', '') ?></p><br>
-						          		<?php
-						          	}
+						          	
+							          	foreach ($UserOrders as $key => $value) {
+							          		$totalAmount += $value['ProductPrice']*$value['OrderAmount'];
+							          		?>
+							          			<p class="pull-left"><?php echo $value['OrderAmount'].' ('.$value['ProductName'].')' ?></p>
+							          			<p class="pull-right">PHP <?php echo number_format((float)$value['ProductPrice'], 2, '.', '') ?></p><br>
+							          		<?php
+							          	}
 						           ?>
 						           <br>
 						          <p class="pull-left"><strong>SUB TOTAL: <h5 class="pull-right">PHP <?php echo number_format((float)$totalAmount, 2, '.', '') ?></p></strong></h5><br>
@@ -244,7 +257,7 @@
 						          			 ?>
 						          			
 
-				          			<p class="pull-left"><strong>Amount to Pay: <h5 class="pull-right">PHP <?php echo ($totalAmount >= 1000 ? number_format((float)$totalAmount, 2, '.', ''): number_format((float)$totalAmount + $shippingFee, 2, '.', '')) ?></p></strong></h5><br><br><br>
+				          			<p class="pull-left"><strong>Amount to Pay: <h5 class="pull-right">PHP <?php echo ($totalAmount >= 1000 ? number_format((float)$totalAmount, 2, '.', ''): number_format((float)$totalAmount + $shippingFee, 2, '.', ''));} ?></p></strong></h5><br><br><br>
 						        </div>
 						        <div class="panel-footer">
 						          <font face="azo sans"><a href="?content=products"><button class="btn btn-md" style="margin-left: 15px; padding: 5px 80px;">Buy More!</button></a></font>
@@ -464,4 +477,18 @@
  ?>
 <script type="text/javascript">
 	document.title = "CartOn | Checkout";
+
+	$('#cod-proceed').click(function(){
+		placeOrder('COD');
+	});
+
+	function placeOrder(paymentMethod){
+		var data = new Object();
+    	data["request_type"] = "request-order";
+    	data["PaymentMethod"] = paymentMethod;
+
+        $.post("lib/ajax-request.php", {data: data}, function(callback){
+			location.reload();
+        });
+	}
 </script>

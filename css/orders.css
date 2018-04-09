@@ -56,7 +56,21 @@ tr.trsize
     color: white;
     transition: 0.5s;
     }
-
+.img_pr
+    {
+        height: 75px !important;
+        margin: 10px;
+        transition: 0.3s;
+    }
+.img_pr:hover
+    {
+        outline: 5px solid #0c675f; 
+        transition: .1s;
+    }
+    .img_pr:active
+    {
+        outline: 5px solid #0c675f; 
+    }
 table {
     border-collapse: collapse;
     width: 961px;

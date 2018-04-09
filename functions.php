@@ -39,7 +39,7 @@ function getHeaderObjects($userInfoArray){
 						<?php
 					}else {
 						?>
-							<a href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+							<a style="border: 1px solid #BEBEBE" href="#" data-toggle="modal" data-target="#myModal88"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 						<?php
 					}
 				 ?>
@@ -223,7 +223,7 @@ function show_products($toShow = -1, $filter = 0, $Search = -1){
 				<div class="w3_hs_bottom w3_hs_bottom_sub1">
 					<ul>
 						<li>
-							<a href="#" data-toggle="modal" data-target="#productModal-<?php echo $products['ProductID']?>"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+							<a href="#" data-toggle="modal" data-target="#productModal-<?php echo $products['ProductID']?>"><span class="fa fa-eye" aria-hidden="true"></span></a>
 						</li>
 					</ul>
 				</div>

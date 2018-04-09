@@ -64,7 +64,7 @@
 	    <input type="text" class="form-control" placeholder="<?php echo $_SESSION['userInfo']['UserAddress2'] ?>" id="account-address2">
 	  </div>
 
-	  <button type="button" class="btn pull-right" id="account-done">DONE</button>
+	  <button type="button" class="btn pull-right" id="account-done"><font face="azo sans">DONE</font></button>
 	 </div> 
 
 	</div>

@@ -238,5 +238,58 @@
 		</table>
 <?php } ?>
 
+<<<<<<< HEAD
+<div class="col-md-12 col-sm-12" style="padding-bottom: 113px;padding-right: 0px;padding-left: 50px;">  
+	<div class="row">
+	        <ul class="producthandler"> 
+				<li class='product '>
+				    <img src='uploads/products/' class='productimage'>
+				    <p class='itmname' align='center'></p>
+				    <strong align='center'></strong><br>
+				    <a href=><button class='btn edtbtn' id="grid-edit">
+				    <i class="fa fa-spinner"></i></span> Process</button></a>
+				    <button class='btn dltbtn' id="grid-delete">
+				    <i class="fa fa-ban"></i></span> Cancel</button>
+				    	<br>&nbsp
+				</li>
+				<li class='product '>
+				    <img src='uploads/products/' class='productimage'>
+				    <p class='itmname' align='center'></p>
+				    <strong align='center'></strong><br>
+				    <a href=><button class='btn edtbtn' id="grid-edit">
+				    <i class="fa fa-truck"></i></span> Deliver</button></a>
+				    <button class='btn dltbtn' id="grid-delete">
+				    <i class="fa fa-ban"></i></span> Cancel</button>
+				    	<br>&nbsp
+				</li>
+				<li class='product '>
+				    <img src='uploads/products/' class='productimage'>
+				    <p class='itmname' align='center'></p>
+				    <strong align='center'></strong><br>
+				    <a href=><button class='btn edtbtn' id="grid-edit">
+				    <i class="fa fa-check"></i></span> Done</button></a>
+				    <button class='btn dltbtn' id="grid-delete">
+				    <i class="fa fa-ban"></i></span> Cancel</button>
+				    	<br>&nbsp
+				</li>
+				<li class='product '>
+				    <img src='uploads/products/' class='productimage'>
+				    <p class='itmname' align='center'></p>
+				    <strong align='center'></strong><br>
+				    <button class='btn dltbtn' id="grid-delete">
+				    <i class="fa fa-ban"></i></span> Cancel</button>
+				    	<br>&nbsp
+				</li>
+				<li class='product '>
+				    <img src='uploads/products/' class='productimage'>
+				    <p class='itmname' align='center'></p>
+				    <strong align='center'></strong><br>
+				    <h4 class="pstate">PROCESSING</h4>
+				</li>
+  			</ul>
+		  </div>
+	</div>
+=======
 
+>>>>>>> cbf1dcaffb0dddb966f4c5bfa71f9010c983feb5
 </center>

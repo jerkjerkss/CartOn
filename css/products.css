@@ -23,12 +23,21 @@ body
     content: "";
     clear: both;
     display: table;
+<<<<<<< HEAD
 }
 
 .btn-group button:not(:last-child) {
     border-right: none;
 }
 
+=======
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+>>>>>>> cbf1dcaffb0dddb966f4c5bfa71f9010c983feb5
 .btn-group button:hover {
     background-color: #80dbdc;
 }
@@ -121,12 +130,21 @@ img.product_img
     cursor: pointer;
     margin-bottom: 10px;
 }
+<<<<<<< HEAD
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+=======
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+>>>>>>> cbf1dcaffb0dddb966f4c5bfa71f9010c983feb5
 .dropdown-content {
     display: none;
     position: absolute;
@@ -218,10 +236,6 @@ th {
 
 /*<------------------------- G R I D ---------------------------->*/
 
-.rowalign
-  {
-    padding-left: 100px;
-  }
 ul.producthandler
 {
   height: 80%;

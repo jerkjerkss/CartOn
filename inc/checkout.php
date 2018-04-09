@@ -113,17 +113,7 @@
 									</ul>
 								</div>
 							</div>
-						<!-- //breadcrumbs -->
-							<!-- <center>
-								<br>
-								<br>
-								<br>
-								<a href="?content=checkout&step=PaymentMethod&PaymentMethod=CoinsPH">Coins.PH</a>
-								<br>
-								<br>
-								<br>
-								<a href="?content=checkout&step=PaymentMethod&PaymentMethod=COD">Cash on Delivery</a>
-							</center> -->
+					
 
 						<div class="container"><br><br>
 						  <div class="row">
@@ -142,9 +132,9 @@
 						          <?php 
 						          	$totalAmount = 0;
 						          	foreach ($UserOrders as $key => $value) {
-						          		$totalAmount += $value['ProductPrice']
+						          		$totalAmount += $value['ProductPrice']*$value['OrderAmount'];
 						          		?>
-						          			<p class="pull-left"><?php echo $value['ProductName'] ?></p>
+						          			<p class="pull-left"><?php echo $value['OrderAmount'].' ('.$value['ProductName'].')' ?></p>
 						          			<p class="pull-right">PHP <?php echo number_format((float)$value['ProductPrice'], 2, '.', '') ?></p><br>
 						          		<?php
 						          	}

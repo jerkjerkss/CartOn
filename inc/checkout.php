@@ -55,15 +55,18 @@
 							                    <div class="row">
 							                    	<div class="form-group col-md-12">
 								                        <label style="margin-left: -15px;">Wallet Address</label>
-								                        <div class="input-group col-md-12">
-								                            <input style="margin-left: -15px;" type="text" class="form-control" placeholder="Enter you Wallet Address"
-								                                required autofocus />
+								                        <div class="input-group col-md-12"><br>
+
+
+
+								                            <h2 class="text-center">X354-G584D-L7WSZ-25FS</h2><br><font face="azo sans light">
+								                            	<button onclick="myFunction()" class="center-block" style="background-color: #2066a2; border: 1px solid #006f66; border-radius:5px ; color: white; padding: 6px 20px;">Copy to clipboard</button></font>
 								                        </div>
 								                    </div>
 
 							                        <div class="col-md-12" style="margin-left: -15px;">
 							                            <div class="form-group">
-							                             <form action="" method="post"><br>
+							                             <form action="" method="post">
 					                                        Upload a screenshot of your payment:<p><br></p>
 					                                        <input type="file">
 							                             </form>
@@ -98,6 +101,96 @@
 								</div>
 							</div>
 						<!-- //breadcrumbs -->
+						<style type="text/css">
+							.panel {
+							    border: 1px solid #f4511e; 
+							    border-radius:0;
+							    transition: box-shadow 0.5s;
+							}
+
+							.panel:hover {
+							    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+							}
+
+							.panel-footer .btn:hover {
+							    border: 1px solid #f4511e;
+							    background-color: #fff !important;
+							    color: #f4511e;
+							}
+
+							.panel-heading {
+							    color: #fff !important;
+							    background-color: #f4511e !important;
+							    padding: 25px;
+							    border-bottom: 1px solid transparent;
+							    border-top-left-radius: 0px;
+							    border-top-right-radius: 0px;
+							    border-bottom-left-radius: 0px;
+							    border-bottom-right-radius: 0px;
+							}
+
+							.panel-footer {
+							    background-color: #fff !important;
+							}
+
+							.panel-footer h3 {
+							    font-size: 32px;
+							}
+
+							.panel-footer h4 {
+							    color: #aaa;
+							    font-size: 14px;
+							}
+
+							.panel-footer .btn {
+							    margin: 15px 0;
+							    background-color: #f4511e;
+							    color: #fff;
+							}
+							.fee {
+								margin-right: 30px;
+							}
+							.btn-md {
+								padding: 10px 100px;
+							}
+
+
+						</style>
+						<div class="container">
+						  
+						  <div class="row"><br><br>
+						  	<div class="col-md-4"></div>
+						    <div class="col-md-4 col-sm-12">
+						      <div class="panel panel-default text-center">
+						        <div class="panel-heading">
+						          	<h3>Payment: Cash on Delivery</h3>
+						        </div>
+						        <div class="panel-body"><br>
+
+						      	  <p><strong class="pull-left">Receiver :</strong></p>
+						      	  <p class=" pull-left">&nbsp;Erwin Hayag</p><br>
+						          <p class="pull-left"><strong>Shipping Address :</strong> Cavite, Philippines</p><br>
+						          <p class="pull-left"><strong>Track Number :</strong> 23FJ6-3RH</p><br>
+						          <p class="pull-left"><strong>Order ID :</strong> 0985-9784</p><br><br>
+						          
+						          <p><strong class="pull-left">Shipping Fee :</strong></p>
+						          <p class="pull-right fee">PHP 100.00</p><br>
+						          <p><strong class="pull-left">VAT :</strong></p>
+						          <p class="pull-right fee">PHP 50.00</p><br>
+						          <p><strong class="pull-left">TOTAL :</strong></p>
+						          <p class="pull-right fee">PHP 150.00</p><br><br>
+
+						          
+						        </div>
+						        <div class="panel-footer">
+						          
+						          <button class="btn btn-md">Proceed</button>
+						        </div>
+						      </div> 
+						    </div> 
+						  </div>
+						</div>
+
 						
 					<?php
 
@@ -198,20 +291,20 @@
 						  </div>
 						</div>
 						<style type="text/css">
-						.btn-lg{
-							padding: 3px 20px;
-						}
-						#payment{
-							background-color: 
-						}
-						.pull-right {
-							margin-right: 40px;
-						}
-						#coinsph{
-							width: 196px;
-							height: 110px;
-							margin-left: -32px;
-						}
+							.btn-lg{
+								padding: 3px 20px;
+							}
+							#payment{
+								background-color: 
+							}
+							.pull-right {
+								margin-right: 40px;
+							}
+							#coinsph{
+								width: 196px;
+								height: 110px;
+								margin-left: -32px;
+							}
 							.panel {
 							    border: 1px solid #029f92; 
 							    border-radius:0;

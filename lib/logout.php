@@ -6,5 +6,5 @@
     $CART->logs($_SESSION['userInfo']['UserID'], 'Logout');
 
 	session_destroy();
-    header('Location: ../CartOn');
+    header('Location: ../index');
  ?>

@@ -12,6 +12,8 @@
 		addcart($data['ProductID'], -1);
 	}else if ($data['request_type'] == "request-removecart") {
 		removecart($data['OrderID']);
+	}else if ($data['request_type'] == "request-updateinfo") {
+		updateInfo($data['target'], $data['value']);
 	}
 
 	function signup($fname, $lname, $email, $password){
@@ -100,6 +102,44 @@
 
 		$removeCart = $CARTON::update('orders', array('OrderStatus' => 'Remove', 'OrderAmount' => 0),"`UserID` = '$UserID' && `OrderID` = '$OrderID'", 'SUCCESS: UPDATE CART');
 
+	}
+
+	function updateInfo($target, $value){
+		session_start();
+		$CARTON = "CARTON";
+		$CART = new $CARTON;
+
+		$UserID = $_SESSION['userInfo']['UserID'];
+
+		if ($target == "fname") {
+			$target = "UserFirstName";
+			$_SESSION['userInfo']['UserFirstName'] = $value;
+		}else if ($target == "lname") {
+			$target = "UserLastName";
+			$_SESSION['userInfo']['UserLastName'] = $value;
+		}else if ($target == "phone") {
+			$target = "UserPhone";
+			$_SESSION['userInfo']['UserPhone'] = $value;
+		}else if ($target == "city") {
+			$target = "UserCity";
+			$_SESSION['userInfo']['UserCity'] = $value;
+		}else if ($target == "state") {
+			$target = "UserState";
+			$_SESSION['userInfo']['UserState'] = $value;
+		}else if ($target == "country") {
+			$target = "UserCountry";
+			$_SESSION['userInfo']['UserCountry'] = $value;
+		}else if ($target == "address") {
+			$target = "UserAddress";
+			$_SESSION['userInfo']['UserAddress'] = $value;
+		}else if ($target == "address2") {
+			$target = "UserAddress2";
+			$_SESSION['userInfo']['UserAddress2'] = $value;
+		}
+
+		$updateInfo = $CARTON::update('users', array($target => $value),"`UserID` = '$UserID'");
+
+		echo "SUCESSSsss";
 	}
 
 

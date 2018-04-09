@@ -10,7 +10,7 @@
 <div class="footer">
 
 	<?php 
-		if ($content != "checkout") {
+		if ($content != "checkout" && $content != "about" && $content != "mailus" && $content != "account") {
 	 ?>
 	<div class="container">
 		<div class="w3_footer_grids">

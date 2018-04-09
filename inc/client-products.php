@@ -85,11 +85,6 @@
 	  <a href="?content=products&view=list"><button class="btnop">
 			<i class="fa fa-list"></i></button></a></button>
 	</div>
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> cbf1dcaffb0dddb966f4c5bfa71f9010c983feb5
 	<br>
 
 <?php if ($view == "list"){ ?>

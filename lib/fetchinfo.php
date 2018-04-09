@@ -35,6 +35,11 @@ class FetchInfo extends CARTON
 		return parent::select('*', 'products', "`ProductName` LIKE '%$searchName%' ORDER BY `ProductUpdateDate` DESC", 'config.ini');
 	}
 
+	function getCustomerOrders($clientInfo){
+		$SellerGroupID = $clientInfo['SellerGroupID'];
+		return parent::select('*', '`orders` INNER JOIN `users` INNER JOIN `products`', "`orders`.`UserID` = `users`.`UserID` AND `orders`.`ProductID` = `products`.`ProductID` AND `products`.`SellerGroupID` = $SellerGroupID", 'config.ini');
+	}
+
 
 	
 	

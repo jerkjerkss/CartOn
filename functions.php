@@ -45,7 +45,7 @@ function getHeaderObjects($userInfoArray){
 				 ?>
 			</div>
 			<div class="w3l_logo">
-				<a href="index"><img style="max-width: 250px;margin:  0 -1px 0;" src="/CartOn/images/texticon.png">
+				<a href="index"><img style="max-width: 250px;margin:  0 -1px 0;" src="images/texticon.png">
 				</a>
 			</div>
 			<div class="search">

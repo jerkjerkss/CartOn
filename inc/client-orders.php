@@ -6,19 +6,11 @@
  ?>
 <center>
 	<div class="cont">
-<<<<<<< HEAD
 		<a href="?content=orders&manage=pending"><img class="img_pr" src="images/pr1.png"></a>
 		<a href="?content=orders&manage=processing"><img class="img_pr" src="images/pr2.png"></a>
 		<a href="?content=orders&manage=shipping" ><img class="img_pr" src="images/pr3.png"></a>
 		<a href="?content=orders&manage=delivered"><img class="img_pr" src="images/pr4.png"></a>
 		<a href="?content=orders&manage=list"><img class="img_pr" src="images/pr5.png"></a>
-=======
-		<a href="?content=orders&manage=pending" class="processstyle">PENDING</a>
-		<a href="?content=orders&manage=processing" class="processstyle">PROCESSING</a>
-		<a href="?content=orders&manage=shipping" class="processstyle">SHIPPING</a>
-		<a href="?content=orders&manage=delivered" class="processstyle">DELIVERED</a>
-		<a href="?content=orders&manage=list" class="processstyle">LIST OF ORDERS</a>
->>>>>>> 2dbb129e92de6f3763a8ec8999622f92fcfc6caf
 	</div>
 
 <?php if ($manage == "pending") { ?>

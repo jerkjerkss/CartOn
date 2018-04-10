@@ -83,21 +83,21 @@ input {
         <td>Erwin Hayag</td>
         <td>erwin@boompanes.com</td>
         <td>15 products</td>
-        <td>Wala</td>
+        <td>8/10</td>
       </tr>
       <tr id="tr2">
         <td><img id="img" src="images/14.jpg"></td>
         <td>Jericho Gonzales</td>
         <td>youre@road.com</td>
         <td>12 products</td>
-        <td>Wala din</td>
+        <td>9/10</td>
       </tr>
       <tr id="tr3">
         <td><img id="img" src="images/14.jpg"></td>
         <td>Cedrick Paulme</td>
         <td>Dahilsayo@akoylalaban.com</td>
         <td>12 products</td>
-        <td>Wala din</td>
+        <td>8/10</td>
       </tr>
     </tbody>
   </table>
@@ -124,7 +124,7 @@ input {
         <div class="panel-body">
         	<form>
 			    <div class="form-group">
-			      <label>Worker's Name:</label><br>
+			      <label>Worker's Email Address</label><br>
 			      <input type="text" class="form-control">
 			    </div>
 			  </form>

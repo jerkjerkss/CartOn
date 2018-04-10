@@ -1,7 +1,7 @@
 <?php  
 	global $FETCHINFO;
 	$clientProducts = $FETCHINFO::getClientProducts($_SESSION['clientInfo']);
-
+	$subCategory = $FETCHINFO::getSubCategoryArray();
 	$view = "";
   	if(isset($_REQUEST['view'])) :
     $view = $_REQUEST['view'];
@@ -44,33 +44,41 @@
 					</ul>
 				</div>
 			</div>
+		<!-- breadcrumbs -->
 			<h1 class="heading">Edit PRODUCT</h1>
-		<form>
-			<img class="product_img" src="uploads/products/Capture.PNG"><br>
-			<button class="change_photo"> Upload Photo </button><br>
 
-				<div class="dropdown">
-				  <button class="dropbtn">Change Category</button>
-					  <div class="dropdown-content">
-						<a href="">Apparel</a>
-						<a href="">Footwear</a>
-						<a href="">Electronics</a>
-						<a href="">Accessories</a>
-						<a href="">Footwear</a>
-					  </div>
-			 	</div><br>
-			  <input type="text" id="pname"  placeholder="Product Name">
-			  <br>
-			  <textarea id="pdes" placeholder="Product Long Description.." style="height:100px; width: 50%"></textarea> <br>
-			  <textarea id="pdes" placeholder="Product Short Description.." style="height:65px; width: 25%"></textarea>
-			  <textarea id="pdes" placeholder="Product Cart Description.." style="height:65px; width: 25%"></textarea> <br>
-			  <input type="text" id="pprice"  placeholder="Product Price"><br>
-			  <input type="text" id="pweight"  placeholder="Product Weight"><br>
-			  <input type="text" id="ploc"  placeholder="Product Location"><br>
-			  <input type="text" id="pstock"  placeholder="Product Stock"><br>
+		<?php foreach ($clientProducts as $key => $value) {
+				if ($edit == $value['ProductID']) {
+			?>
+					<form>
+						<img class="product_img" src="uploads/products/<?php echo $value['ProductThumb'] ?>"><br>
+						<button class="change_photo"> Upload Photo </button><br>
 
-			  <button class="addbtn"><i class="fa fa-check"></i> SAVE EDIT </button>
-		</form>
+							<div class="dropdown">
+							  	<select class="dropbtn">
+							  		<?php foreach ($subCategory as $keys => $values) {
+							  			?>
+							  				<option><?php echo $values['SubCategoryName'] ?></option>
+							  			<?php
+							  		} ?>
+							  	</select>
+						 	</div><br>
+						  <input type="text" id="pname"  placeholder="Product Name" value="<?php echo $value['ProductName']; ?>">
+						  <br>
+						  <textarea id="pdes" placeholder="Product Long Description.." style="height:100px; width: 50%"><?php echo $value['ProductLongDesc']; ?></textarea> <br>
+						  <textarea id="pdes" placeholder="Product Short Description.." style="height:65px; width: 25%"><?php echo $value['ProductShortDesc']; ?></textarea>
+						  <textarea id="pdes" placeholder="Product Cart Description.." style="height:65px; width: 25%"><?php echo $value['ProductCartDesc']; ?></textarea> <br>
+						  <input type="text" id="pprice"  placeholder="Product Price" value="<?php echo $value['ProductPrice'] ?>"><br>
+						  <input type="text" id="pweight"  placeholder="Product Weight" value="<?php echo $value['ProductWeight'] ?>"><br>
+						  <input type="text" id="ploc"  placeholder="Product Location" value="<?php echo $value['ProductLocation'] ?>"><br>
+						  <input type="text" id="pstock"   value="<?php echo $value['ProductStock'] ?>"><br>
+
+						  <button class="addbtn"><i class="fa fa-check"></i> SAVE EDIT </button>
+					</form>
+			<?php
+				}
+		} ?>
+		
 		<!-- //breadcrumbs -->
 	<?php
 }else { ?>

@@ -159,7 +159,7 @@ function ___client_management(){
 }
 
 function ___client_account(){
-	include('inc/client-account.php');
+	include('inc/account.php');
 }
 
 

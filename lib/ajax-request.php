@@ -16,6 +16,8 @@
 		updateInfo($data['target'], $data['value']);
 	}else if ($data['request_type'] == "request-order") {
 		customerOrder($data['PaymentMethod']);
+	}else if ($data['request_type'] == "request-processUpdate") {
+		processUpdate($data['currentProcess'], $data['action'], $data['OrderID']);
 	}
 
 	function signup($fname, $lname, $email, $password){
@@ -153,6 +155,40 @@
 			$setOrder = $CARTON::update('orders', array("OrderStatus" => "Pending", "OrderPaymentMethod" => 'Cash On Delivery'),"`UserID` = '$UserID' AND `OrderStatus` = 'Cart'");
 		}else if ($paymentType == "COINS.PH") {
 			$setOrder = $CARTON::update('orders', array("OrderStatus" => "Pending", "OrderPaymentMethod" => 'COINS.PH'),"`UserID` = '$UserID' AND `OrderStatus` = 'Cart'");
+		}
+
+	}
+
+	function processUpdate($currentProcess, $action, $OrderID){
+		session_start();
+		$CARTON = "CARTON";
+		$CART = new $CARTON;
+		
+		if ($currentProcess == "pending") {
+			if ($action == "process") {
+				$setOrder = $CARTON::update('orders', array("OrderStatus" => "Processing"),"`OrderID` = '$OrderID'");
+			}
+
+		}else if ($currentProcess == "processing") {
+			if ($action == "deliver") {
+				$setOrder = $CARTON::update('orders', array("OrderStatus" => "Shipping"),"`OrderID` = '$OrderID'");
+			}else if ($action == "cancel") {
+				$setOrder = $CARTON::update('orders', array("OrderStatus" => "Pending"),"`OrderID` = '$OrderID'");
+			}
+
+
+		}else if ($currentProcess == "shipping") {
+			if ($action == "done") {
+				$setOrder = $CARTON::update('orders', array("OrderStatus" => "Delivered"),"`OrderID` = '$OrderID'");
+			}else if ($action == "cancel") {
+				$setOrder = $CARTON::update('orders', array("OrderStatus" => "Processing"),"`OrderID` = '$OrderID'");
+			}
+
+
+		}else if ($currentProcess == "delivered") {
+			if ($action == "cancel") {
+				$setOrder = $CARTON::update('orders', array("OrderStatus" => "Shipping"),"`OrderID` = '$OrderID'");
+			}
 		}
 
 	}
